@@ -27,11 +27,16 @@ const Home = () => {
         <div className="portfolio">
           {restData.map((post) => (
             <article key={post.id} id={`post-${post.id}`}>
-              <img src={`${post.acf.hero_img.url}`} alt=""></img>
+              <Link to={`/blog/${post.slug}`}>
+                <img src={`${post.acf.hero_img.url}`} alt=""></img>
+              </Link>
               <Link to={`/blog/${post.slug}`}>
                 <h2>{post.title.rendered}</h2>
               </Link>
               <p>{post.acf.description}</p>
+              <Link to={`/blog/${post.slug}`}>
+                <p>View Full Project Page</p>
+              </Link>
             </article>
           ))}
         </div>
