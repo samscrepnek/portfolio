@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
-// Create a new Component and import it here
-// In the new Component, output all of the Service posts
-// Hint: Check Posts.js for a similar example of outputting multiple posts
 
 const Contact = () => {
-  const restPath = "";
+  const restPath = "https://samscrepnek.ca/qM3B3Db6DyVW5YPK/wp-json/wp/v2/pages/32?_embed";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -26,10 +23,22 @@ const Contact = () => {
   return (
     <>
       {isLoaded ? (
-        <article id={`post-${restData.id}`}>
+        <article id={`page-${restData.id}`}>
           <h1>{restData.title.rendered}</h1>
-          <div className="entry-content" dangerouslySetInnerHTML={{ __html: restData.content.rendered }}></div>
-          {/* Call the new Component here */}
+          <div className="entry-content">
+            <p>{restData.acf.description}</p>
+          </div>
+          <div>
+            <p>
+              <a href={`${restData.acf.email}`}>Email</a>
+            </p>
+            <p>
+              <a href={`${restData.acf.linkedin}`}>LinkedIn</a>
+            </p>
+            <p>
+              <a href={`${restData.acf.github}`}>GitHub</a>
+            </p>
+          </div>
         </article>
       ) : (
         <Loading />
