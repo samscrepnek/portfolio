@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import Posts from "./components/Posts";
-import Post from "./components/Post";
+import Project from "./components/Post";
 import Contact from "./components/Contact";
 
 function App() {
@@ -41,9 +40,6 @@ function App() {
               <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to="/blog">Blog</NavLink>
-            </li>
-            <li>
               <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
@@ -53,8 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Posts featuredImage={featuredImage} />} />
-          <Route path="/blog/:slug" element={<Post />} />
+          <Route path="/:slug" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
