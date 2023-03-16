@@ -24,7 +24,10 @@ const Project = () => {
   }, [restPath]);
 
   const checkACFContent = function (item) {
-    if (restData.acf.hasOwnProperty(item)) {
+    console.log(item);
+    // console.log(restData.acf.item);
+    if (typeof item != "undefined" && item !== null) {
+      // if (item > 0) {
       return true;
     } else {
       return false;
@@ -46,7 +49,7 @@ const Project = () => {
               <p>{restData.acf.description}</p>
             </div>
 
-            {checkACFContent("skills_used") ? (
+            {checkACFContent(restData.acf.skills_used) ? (
               <div>
                 <h2>Skills Used</h2>
                 <ul>
@@ -59,7 +62,7 @@ const Project = () => {
               <></>
             )}
 
-            {checkACFContent("features") ? (
+            {/* {checkACFContent("features") ? (
               <div>
                 <h2>Features</h2>
                 {restData.acf.features.map((feature) => (
@@ -72,9 +75,9 @@ const Project = () => {
               </div>
             ) : (
               <></>
-            )}
+            )} */}
 
-            {checkACFContent("takeaways") ? (
+            {checkACFContent(restData.acf.takeaways) ? (
               <div>
                 <h2>Takeaways</h2>
                 <p>{restData.acf.takeaways}</p>
@@ -83,7 +86,7 @@ const Project = () => {
               <></>
             )}
 
-            <div>
+            {/* <div>
               {checkACFContent("git_link") ? (
                 <p>
                   <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>
@@ -103,7 +106,7 @@ const Project = () => {
               ) : (
                 <></>
               )}
-            </div>
+            </div> */}
           </article>
           {/* <nav className="posts-navigation">
             {restData.previous_post["id"] && (
