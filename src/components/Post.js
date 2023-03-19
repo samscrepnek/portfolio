@@ -23,13 +23,45 @@ const Project = () => {
     fetchData();
   }, [restPath]);
 
+  // Checks if item(string and arrays) has content.
   const checkACFContent = function (item) {
-    console.log(item);
-    // console.log(restData.acf.item);
-    if (typeof item != "undefined" && item !== null) {
-      // if (item > 0) {
-      return true;
+    // Checks if string and arrays have content
+    const CheckItemLength = function (item) {
+      let itemLength = item.length;
+      if (itemLength > 0) {
+        // item has content
+        return true;
+      } else {
+        // item has no content
+        return false;
+      }
+    };
+
+    // Checks type of item
+    let itemType = typeof item;
+    if (itemType === "object") {
+      if (!Array.isArray(item)) {
+        // item is an object with content
+        return true;
+      } else {
+        if (CheckItemLength(item)) {
+          // array has content
+          return true;
+        } else {
+          // array has no content
+          return false;
+        }
+      }
+    } else if (itemType === "string") {
+      if (CheckItemLength(item)) {
+        // string has content
+        return true;
+      } else {
+        // string has no content
+        return false;
+      }
     } else {
+      // item has no content
       return false;
     }
   };
@@ -62,7 +94,7 @@ const Project = () => {
               <></>
             )}
 
-            {/* {checkACFContent("features") ? (
+            {checkACFContent(restData.acf.features) ? (
               <div>
                 <h2>Features</h2>
                 {restData.acf.features.map((feature) => (
@@ -75,7 +107,7 @@ const Project = () => {
               </div>
             ) : (
               <></>
-            )} */}
+            )}
 
             {checkACFContent(restData.acf.takeaways) ? (
               <div>
@@ -86,8 +118,8 @@ const Project = () => {
               <></>
             )}
 
-            {/* <div>
-              {checkACFContent("git_link") ? (
+            <div>
+              {checkACFContent(restData.acf.git_link) ? (
                 <p>
                   <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>
                     {restData.acf.git_link.title}
@@ -97,7 +129,7 @@ const Project = () => {
                 <></>
               )}
 
-              {checkACFContent("live_site_link") ? (
+              {checkACFContent(restData.acf.live_site_link) ? (
                 <p>
                   <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
                     {restData.acf.live_site_link.title}
@@ -106,7 +138,7 @@ const Project = () => {
               ) : (
                 <></>
               )}
-            </div> */}
+            </div>
           </article>
           {/* <nav className="posts-navigation">
             {restData.previous_post["id"] && (
