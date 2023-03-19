@@ -70,76 +70,76 @@ const Project = () => {
     <>
       {isLoaded ? (
         <>
-          <article id={`post-${restData.id}`}>
-            <h1>{restData.title.rendered}</h1>
+          {/* <article id={`post-${restData.id}`}> */}
+          <h1>{restData.title.rendered}</h1>
+          <div>
+            <img src={`${restData.acf.hero_img.url}`} alt=""></img>
+          </div>
+
+          <div>
+            <h2>Description</h2>
+            <p>{restData.acf.description}</p>
+          </div>
+
+          {checkACFContent(restData.acf.skills_used) ? (
             <div>
-              <img src={`${restData.acf.hero_img.url}`} alt=""></img>
-            </div>
-
-            <div>
-              <h2>Description</h2>
-              <p>{restData.acf.description}</p>
-            </div>
-
-            {checkACFContent(restData.acf.skills_used) ? (
-              <div>
-                <h2>Skills Used</h2>
-                <ul>
-                  {restData.acf.skills_used.map((skills) => (
-                    <li key={skills}>{skills}</li>
-                  ))}
-                </ul>
-              </div>
-            ) : (
-              <></>
-            )}
-
-            {checkACFContent(restData.acf.features) ? (
-              <div>
-                <h2>Features</h2>
-                {restData.acf.features.map((feature) => (
-                  <div key={feature}>
-                    <img src={`${feature.feature_img.url}`} alt=""></img>
-                    <h3>{feature.feature_title}</h3>
-                    <p>{feature.feature_description}</p>
-                  </div>
+              <h2>Skills Used</h2>
+              <ul>
+                {restData.acf.skills_used.map((skills) => (
+                  <li key={skills}>{skills}</li>
                 ))}
-              </div>
-            ) : (
-              <></>
-            )}
-
-            {checkACFContent(restData.acf.takeaways) ? (
-              <div>
-                <h2>Takeaways</h2>
-                <p>{restData.acf.takeaways}</p>
-              </div>
-            ) : (
-              <></>
-            )}
-
-            <div>
-              {checkACFContent(restData.acf.git_link) ? (
-                <p>
-                  <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>
-                    {restData.acf.git_link.title}
-                  </a>
-                </p>
-              ) : (
-                <></>
-              )}
-
-              {checkACFContent(restData.acf.live_site_link) ? (
-                <p>
-                  <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
-                    {restData.acf.live_site_link.title}
-                  </a>
-                </p>
-              ) : (
-                <></>
-              )}
+              </ul>
             </div>
-          </article>
+          ) : (
+            <></>
+          )}
+
+          {checkACFContent(restData.acf.features) ? (
+            <div>
+              <h2>Features</h2>
+              {restData.acf.features.map((feature) => (
+                <div key={feature}>
+                  <img src={`${feature.feature_img.url}`} alt=""></img>
+                  <h3>{feature.feature_title}</h3>
+                  <p>{feature.feature_description}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <></>
+          )}
+
+          {checkACFContent(restData.acf.takeaways) ? (
+            <div>
+              <h2>Takeaways</h2>
+              <p>{restData.acf.takeaways}</p>
+            </div>
+          ) : (
+            <></>
+          )}
+
+          <div>
+            {checkACFContent(restData.acf.git_link) ? (
+              <p>
+                <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>
+                  {restData.acf.git_link.title}
+                </a>
+              </p>
+            ) : (
+              <></>
+            )}
+
+            {checkACFContent(restData.acf.live_site_link) ? (
+              <p>
+                <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
+                  {restData.acf.live_site_link.title}
+                </a>
+              </p>
+            ) : (
+              <></>
+            )}
+          </div>
+          {/* </article> */}
           {/* <nav className="posts-navigation">
             {restData.previous_post["id"] && (
               <Link to={`/blog/${restData.previous_post["slug"]}`} className="prev-post">
