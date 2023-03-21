@@ -30,7 +30,7 @@ const Contact = () => {
           </div>
           <div>
             <p>
-              <a href={`${restData.acf.email}`}>Email</a>
+              <a href={`mailto:${restData.acf.email}`}>Copy Email</a>
             </p>
             <p>
               <a href={`${restData.acf.linkedin}`}>LinkedIn</a>
