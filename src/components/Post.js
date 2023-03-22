@@ -70,24 +70,20 @@ const Project = () => {
           )}
 
           <div>
-            {checkACFContent(restData.acf.git_link) ? (
+            {restData.acf.git_link && (
               <p>
                 <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>
                   {restData.acf.git_link.title}
                 </a>
               </p>
-            ) : (
-              <></>
             )}
 
-            {checkACFContent(restData.acf.live_site_link) ? (
+            {restData.acf.live_site_link && (
               <p>
                 <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
                   {restData.acf.live_site_link.title}
                 </a>
               </p>
-            ) : (
-              <></>
             )}
           </div>
           {/* </article> */}
