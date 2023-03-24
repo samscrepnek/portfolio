@@ -28,29 +28,29 @@ const Project = () => {
       {isLoaded ? (
         <>
           {/* <article id={`post-${restData.id}`}> */}
-          <h1>{restData.title.rendered}</h1>
-          <div>
-            <img src={`${restData.acf.hero_img.url}`} alt=""></img>
-          </div>
+          <header>
+            <h1>{restData.title.rendered}</h1>
 
-          <div>
+            <img src={`${restData.acf.hero_img.url}`} alt=""></img>
+          </header>
+          <section>
             <h2>Description</h2>
             <p>{restData.acf.description}</p>
-          </div>
+          </section>
 
           {restData.acf.skills_used && restData.acf.skills_used.length > 0 && (
-            <div>
+            <section>
               <h2>Skills Used</h2>
               <ul>
                 {restData.acf.skills_used.map((skills) => (
                   <li key={skills}>{skills}</li>
                 ))}
               </ul>
-            </div>
+            </section>
           )}
 
           {restData.acf.features && (
-            <div>
+            <section>
               <h2>Features</h2>
               {restData.acf.features.map((feature) => (
                 <div key={feature}>
@@ -59,33 +59,35 @@ const Project = () => {
                   <p>{feature.feature_description}</p>
                 </div>
               ))}
-            </div>
+            </section>
           )}
 
           {restData.acf.takeaways && (
-            <div>
+            <section>
               <h2>Takeaways</h2>
               <p>{restData.acf.takeaways}</p>
-            </div>
+            </section>
           )}
 
-          <div>
-            {restData.acf.git_link && (
-              <p>
-                <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>
-                  {restData.acf.git_link.title}
-                </a>
-              </p>
-            )}
+          {(restData.acf.git_link || restData.acf.live_site_link) && (
+            <section>
+              {restData.acf.git_link && (
+                <p>
+                  <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>
+                    {restData.acf.git_link.title}
+                  </a>
+                </p>
+              )}
 
-            {restData.acf.live_site_link && (
-              <p>
-                <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
-                  {restData.acf.live_site_link.title}
-                </a>
-              </p>
-            )}
-          </div>
+              {restData.acf.live_site_link && (
+                <p>
+                  <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
+                    {restData.acf.live_site_link.title}
+                  </a>
+                </p>
+              )}
+            </section>
+          )}
           {/* </article> */}
           {/* <nav className="posts-navigation">
             {restData.previous_post["id"] && (

@@ -23,6 +23,10 @@ function App() {
     return { __html: img };
   };
 
+  function getYear() {
+    return new Date().getFullYear();
+  }
+
   return (
     <Router basename="/">
       <header id="masthead" className="site-header">
@@ -54,9 +58,7 @@ function App() {
         </Routes>
       </main>
       <footer>
-        <p className="copyright">
-          Created by <a href="https://wp.bcitwebdeveloper.ca/">Jonathon Leathers</a>.
-        </p>
+        <p className="copyright">&copy; {getYear()} Sam Screpnek.</p>
       </footer>
     </Router>
   );

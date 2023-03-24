@@ -6,12 +6,16 @@ const Home = () => {
   const restPath = "https://samscrepnek.ca/qM3B3Db6DyVW5YPK/wp-json/wp/v2/pinkmug-project?_embed&acf_format=standard";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
+  const [numProjects, setNumProjects] = useState(3);
+  const [isMoreProjects, setMoreProjects] = useState(true);
+  const [projectTotal, setProjectTotal] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(restPath);
       if (response.ok) {
         const data = await response.json();
+        setProjectTotal(data.length);
         setData(data);
         setLoadStatus(true);
       } else {
@@ -21,11 +25,20 @@ const Home = () => {
     fetchData();
   }, [restPath]);
 
+  function handleChange() {
+    let loadNum = numProjects + 2;
+    if (loadNum >= projectTotal) {
+      setMoreProjects(false);
+      loadNum = projectTotal;
+    }
+    setNumProjects(loadNum);
+  }
+
   return (
     <>
       {isLoaded ? (
         <div className="portfolio">
-          {restData.map((post) => (
+          {restData.slice(0, numProjects).map((post) => (
             <article key={post.id} id={`post-${post.id}`}>
               <Link to={`/${post.slug}`}>
                 <img src={`${post.acf.hero_img.url}`} alt=""></img>
@@ -39,6 +52,7 @@ const Home = () => {
               </Link>
             </article>
           ))}
+          {isMoreProjects && <p onClick={handleChange}>Load More Projects</p>}
         </div>
       ) : (
         <Loading />

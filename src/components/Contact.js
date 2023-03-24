@@ -5,6 +5,8 @@ const Contact = () => {
   const restPath = "https://samscrepnek.ca/qM3B3Db6DyVW5YPK/wp-json/wp/v2/pages/32?_embed";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +22,26 @@ const Contact = () => {
     fetchData();
   }, [restPath]);
 
+  useEffect(() => {
+    let myInterval = setInterval(timer, 1000);
+    function timer() {
+      if (counter > 0) {
+        setCounter(counter - 1);
+        setEmailCopied(true);
+        console.log("yup");
+      } else if (counter <= 0) {
+        console.log("nop");
+        setEmailCopied(false);
+        clearInterval(myInterval);
+      }
+    }
+  }, [counter]);
+
+  function copyEmailToClipboard() {
+    navigator.clipboard.writeText(restData.acf.email);
+    setCounter(5);
+  }
+
   return (
     <>
       {isLoaded ? (
@@ -29,9 +51,9 @@ const Contact = () => {
             <p>{restData.acf.description}</p>
           </div>
           <div>
-            <p>
-              <a href={`mailto:${restData.acf.email}`}>Copy Email</a>
-            </p>
+            {/* {counter > 0 ? <p onClick={copyEmailToClipboard()}>Copy Email</p> : <p>Email Copied</p>} */}
+
+            <p onClick={copyEmailToClipboard}>Copy Email</p>
             <p>
               <a href={`${restData.acf.linkedin}`}>LinkedIn</a>
             </p>
