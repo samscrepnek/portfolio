@@ -6,7 +6,6 @@ const Contact = () => {
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
-  let counter = 0;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,26 +21,18 @@ const Contact = () => {
     fetchData();
   }, [restPath]);
 
-  function emailTimer() {
-    let myInterval = setInterval(timer, 1000);
-    function timer() {
-      if (counter === 0) {
-        console.log("nop");
-        setEmailCopied(false);
-        return clearInterval(myInterval);
-      }
-      if (counter > 0) {
-        counter -= 1;
-        console.log("yup");
-      }
+  function copyEmailTimer() {
+    let myInterval = setInterval(resetEmailCopied, 3500);
+    function resetEmailCopied() {
+      setEmailCopied(false);
+      return clearInterval(myInterval);
     }
   }
 
   function copyEmailToClipboard() {
     navigator.clipboard.writeText(restData.acf.email);
     setEmailCopied(true);
-    counter = 5;
-    emailTimer();
+    copyEmailTimer();
   }
 
   return (
@@ -53,8 +44,6 @@ const Contact = () => {
             <p>{restData.acf.description}</p>
           </div>
           <div>
-            {/* {emailCopied ? <p onClick={copyEmailToClipboard}>Copy Email</p> : <p>Email Copied</p>} */}
-
             <p onClick={copyEmailToClipboard}>{!emailCopied ? "Copy Email" : "Email Copied"}</p>
 
             <p>
