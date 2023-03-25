@@ -41,7 +41,14 @@ const Home = () => {
           {restData.slice(0, numProjects).map((post) => (
             <article key={post.id} id={`post-${post.id}`}>
               <Link to={`/${post.slug}`}>
-                <img src={`${post.acf.hero_img.url}`} alt=""></img>
+                {post.acf.mobile_hero.url ? (
+                  <picture>
+                    <source media="(min-width: 650px)" srcset={`${post.acf.hero_img.url}`} />
+                    <img src={`${post.acf.mobile_hero.url}`} alt=""></img>
+                  </picture>
+                ) : (
+                  <img src={`${post.acf.hero_img.url}`} alt=""></img>
+                )}
               </Link>
               <Link to={`/${post.slug}`}>
                 <h2>{post.title.rendered}</h2>

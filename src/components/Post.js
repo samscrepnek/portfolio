@@ -27,11 +27,16 @@ const Project = () => {
     <>
       {isLoaded ? (
         <>
-          {/* <article id={`post-${restData.id}`}> */}
           <header>
             <h1>{restData.title.rendered}</h1>
-
-            <img src={`${restData.acf.hero_img.url}`} alt=""></img>
+            {restData.acf.mobile_hero.url ? (
+              <picture>
+                <source media="(min-width: 650px)" srcset={`${restData.acf.hero_img.url}`} />
+                <img src={`${restData.acf.mobile_hero.url}`} alt=""></img>
+              </picture>
+            ) : (
+              <img src={`${restData.acf.hero_img.url}`} alt=""></img>
+            )}
           </header>
           <section>
             <h2>Description</h2>
@@ -88,7 +93,6 @@ const Project = () => {
               )}
             </section>
           )}
-          {/* </article> */}
           {/* <nav className="posts-navigation">
             {restData.previous_post["id"] && (
               <Link to={`/blog/${restData.previous_post["slug"]}`} className="prev-post">
