@@ -21,17 +21,16 @@ const Contact = () => {
     fetchData();
   }, [restPath]);
 
-  function copyEmailTimer() {
-    let myInterval = setInterval(resetEmailCopied, 3500);
-    function resetEmailCopied() {
-      setEmailCopied(false);
-      return clearInterval(myInterval);
-    }
-  }
-
   function copyEmailToClipboard() {
     navigator.clipboard.writeText(restData.acf.email);
     setEmailCopied(true);
+    function copyEmailTimer() {
+      let myInterval = setInterval(resetEmailCopied, 3500);
+      function resetEmailCopied() {
+        setEmailCopied(false);
+        return clearInterval(myInterval);
+      }
+    }
     copyEmailTimer();
   }
 
