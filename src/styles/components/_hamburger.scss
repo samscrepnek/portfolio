@@ -1,0 +1,47 @@
+.site-navigation {
+  background-color: #f68114;
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+
+  .top-nav {
+    display: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .icon {
+    background: rgb(255, 255, 255);
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 1rem;
+    color: green;
+  }
+}
+
+.site-navigation.show {
+  .top-nav {
+    display: flex;
+  }
+}
+
+@media (min-width: 650px) {
+  .site-navigation {
+    .top-nav {
+      display: flex;
+    }
+    .icon {
+      display: none;
+    }
+  }
+}

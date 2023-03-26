@@ -27,39 +27,53 @@ function App() {
     return new Date().getFullYear();
   }
 
+  function hamburger() {
+    const nav = document.querySelector(".site-navigation");
+    console.log(nav);
+    nav.classList.toggle("show");
+  }
+
   return (
     <Router basename="/">
-      <header id="masthead" className="site-header">
-        <div className="site-branding">
-          <h1 className="site-title">Sam Screpnek</h1>
-        </div>
-        <nav className="site-navigation">
-          <ul>
-            <li>
-              <NavLink to="/" end>
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main id="main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/:slug" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-      <footer>
-        <p className="copyright">&copy; {getYear()} Sam Screpnek.</p>
-      </footer>
+      <div className="site-wrapper">
+        <header id="masthead" className="site-header">
+          <div className="site-branding">
+            <h1 className="site-title">Sam Screpnek</h1>
+            <h2>Front End Web Developer</h2>
+          </div>
+          <nav className="site-navigation">
+            <ul className="top-nav">
+              <li>
+                <NavLink to="/" end>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about">About</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact">Contact</NavLink>
+              </li>
+            </ul>
+            <p className="icon" onClick={hamburger}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+              </svg>
+            </p>
+          </nav>
+        </header>
+        <main id="main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/:slug" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <footer>
+          <p className="copyright">&copy; {getYear()} Sam Screpnek.</p>
+        </footer>
+      </div>
     </Router>
   );
 }
