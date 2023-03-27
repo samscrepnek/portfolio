@@ -39,7 +39,7 @@ const Home = () => {
       {isLoaded ? (
         <div className="portfolio">
           {restData.slice(0, numProjects).map((post) => (
-            <article key={post.id} id={`post-${post.id}`}>
+            <article key={post.id} id={`post-${post.id}`} className="project">
               <Link to={`/${post.slug}`}>
                 {post.acf.mobile_hero.url ? (
                   <picture>
