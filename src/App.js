@@ -70,8 +70,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <footer>
-          <p className="copyright">&copy; {getYear()} Sam Screpnek.</p>
+        <footer className="site-footer">
+          <p>Site made by Sam Screpnek.</p>
+          <p className="copyright">&copy;{getYear()}</p>
         </footer>
       </div>
     </Router>

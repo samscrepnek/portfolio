@@ -1,0 +1,28 @@
+@use "fonts" as *;
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  font-family: $main-font;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $header-font;
+  }
+
+  .site-wrapper {
+    max-width: 1344px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  main {
+    background-color: #0056b3;
+  }
+  img {
+    max-width: 300px;
+  }
+}

@@ -1,17 +1,2 @@
-body {
-  background-color: rgb(255, 255, 255);
-  margin: 0;
-
-  .site-wrapper {
-    max-width: 1344px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  main {
-    background-color: #0056b3;
-  }
-  img {
-    max-width: 300px;
-  }
-}
+@import "base.scss";
+@import "fonts.scss";

@@ -23,7 +23,7 @@ const About = () => {
   return (
     <>
       {isLoaded ? (
-        <article id={`page-${restData.id}`}>
+        <article id="page-about">
           <h1>{restData.title.rendered}</h1>
           <div className="about-biography">
             <p>{restData.acf.biography}</p>
