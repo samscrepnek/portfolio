@@ -38,6 +38,7 @@ const Home = () => {
     <>
       {isLoaded ? (
         <div className="portfolio">
+          <h2>Portfolio</h2>
           {restData.slice(0, numProjects).map((post) => (
             <article key={post.id} id={`post-${post.id}`} className="project">
               <Link to={`/${post.slug}`}>
@@ -51,7 +52,7 @@ const Home = () => {
                 )}
               </Link>
               <Link to={`/${post.slug}`}>
-                <h2>{post.title.rendered}</h2>
+                <h3>{post.title.rendered}</h3>
               </Link>
               <p>{post.acf.description}</p>
               <Link to={`/${post.slug}`}>

@@ -23,20 +23,20 @@ const About = () => {
   return (
     <>
       {isLoaded ? (
-        <article id="page-about">
+        <div id="page-about">
           <h1>{restData.title.rendered}</h1>
-          <div className="about-biography">
+          <section className="about-biography">
             <p>{restData.acf.biography}</p>
-          </div>
-          <div className="about-skills">
+          </section>
+          <section className="about-skills">
             <h2>Technical Skills</h2>
             <div dangerouslySetInnerHTML={{ __html: restData.acf.technical_skills }}></div>
-          </div>
-          <div className="about-hobbies">
+          </section>
+          <section className="about-hobbies">
             <h2>Hobbies</h2>
             <div dangerouslySetInnerHTML={{ __html: restData.acf.hobbies }}></div>
-          </div>
-        </article>
+          </section>
+        </div>
       ) : (
         <Loading />
       )}

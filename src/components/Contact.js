@@ -37,22 +37,26 @@ const Contact = () => {
   return (
     <>
       {isLoaded ? (
-        <article id={`page-${restData.id}`}>
+        <div id="page-contact">
           <h1>{restData.title.rendered}</h1>
-          <div className="entry-content">
+          <section className="contact-description">
             <p>{restData.acf.description}</p>
-          </div>
-          <div>
+          </section>
+          <section className="contact-links">
             <p onClick={copyEmailToClipboard}>{!emailCopied ? "Copy Email" : "Email Copied"}</p>
 
             <p>
-              <a href={`${restData.acf.linkedin}`}>LinkedIn</a>
+              <a href={`${restData.acf.linkedin}`} target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
             </p>
             <p>
-              <a href={`${restData.acf.github}`}>GitHub</a>
+              <a href={`${restData.acf.github}`} target="_blank" rel="noreferrer">
+                GitHub
+              </a>
             </p>
-          </div>
-        </article>
+          </section>
+        </div>
       ) : (
         <Loading />
       )}
