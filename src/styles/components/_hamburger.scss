@@ -1,12 +1,16 @@
 .site-navigation {
-  background-color: #f68114;
   position: fixed;
   bottom: 20px;
   right: 0;
   left: 0;
+  height: 4.5rem;
 
   .top-nav {
     display: none;
+  }
+
+  ul {
+    margin: 0;
   }
 
   li {
@@ -19,19 +23,32 @@
   }
 
   .icon {
-    background: rgb(255, 255, 255);
-    display: block;
+    background: #f68114;
+    display: flex;
     position: absolute;
     right: 0;
     bottom: 0;
-    margin-right: 1rem;
-    color: green;
+    margin: 0 1rem 0 0;
+    color: white;
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px rgb(82, 82, 82);
   }
 }
 
 .site-navigation.show {
   .top-nav {
     display: flex;
+    background-color: #f68114;
+    height: 4.5rem;
+    box-shadow: 1px 1px 5px rgb(82, 82, 82);
+  }
+
+  .icon {
+    box-shadow: none;
   }
 }
 
