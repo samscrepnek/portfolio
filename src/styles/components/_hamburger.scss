@@ -47,9 +47,10 @@
 @media (min-width: 700px) {
   .site-navigation.hidden,
   .site-navigation {
-    top: 375px;
+    top: 415px;
     right: 0;
     left: 0;
+    position: sticky;
     width: 9rem;
     height: 9rem;
     display: flex;
@@ -60,6 +61,9 @@
       }
       a {
         font-size: 1.5rem;
+      }
+      a:hover {
+        text-decoration: underline;
       }
     }
     .icon {
