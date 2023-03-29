@@ -58,7 +58,7 @@ function App() {
         <header id="masthead" className="site-header">
           <div className="site-branding">
             <h1 className="site-title">Sam Screpnek</h1>
-            <h2>Front End Web Developer</h2>
+            <h2>A Front End-Web Developer</h2>
           </div>
         </header>
         <main id="main">
