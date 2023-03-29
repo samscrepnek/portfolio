@@ -35,10 +35,20 @@
   }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   .site-navigation {
+    top: 375px;
+    right: 0;
+    left: 0;
+    width: 9rem;
+    height: 9rem;
+    display: flex;
     .top-nav {
-      display: flex;
+      display: block;
+
+      li {
+        margin-top: 1rem;
+      }
     }
     .icon {
       display: none;
