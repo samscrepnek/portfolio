@@ -44,7 +44,7 @@ const Home = () => {
               <Link to={`/${post.slug}`}>
                 {post.acf.mobile_hero.url ? (
                   <picture>
-                    <source media="(min-width: 650px)" srcset={`${post.acf.hero_img.url}`} />
+                    <source media="(min-width: 650px)" srcSet={`${post.acf.hero_img.url}`} />
                     <img src={`${post.acf.mobile_hero.url}`} alt=""></img>
                   </picture>
                 ) : (

@@ -32,7 +32,7 @@ const Project = () => {
               <h1>{restData.title.rendered}</h1>
               {restData.acf.mobile_hero.url ? (
                 <picture>
-                  <source media="(min-width: 650px)" srcset={`${restData.acf.hero_img.url}`} />
+                  <source media="(min-width: 650px)" srcSet={`${restData.acf.hero_img.url}`} />
                   <img src={`${restData.acf.mobile_hero.url}`} alt=""></img>
                 </picture>
               ) : (

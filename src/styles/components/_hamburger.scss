@@ -1,58 +1,51 @@
 .site-navigation {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f68114;
+  color: white;
+  border-radius: 25px;
+  margin: 0 0.5rem;
+  width: 334px;
   position: fixed;
   bottom: 20px;
   right: 0;
-  left: 0;
-  height: 4.5rem;
+  box-shadow: 1px 1px 5px rgb(82, 82, 82);
 
   .top-nav {
-    display: none;
-  }
-
-  ul {
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .icon {
-    background: #f68114;
     display: flex;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 0 1rem 0 0;
-    color: white;
-    border-radius: 50%;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-left: 0.5rem;
+    li {
+      list-style: none;
+      margin-right: 1rem;
+    }
+    a {
+      text-decoration: none;
+      font-size: 1.25rem;
+      color: inherit;
+    }
+  }
+  .icon {
     width: 4.5rem;
     height: 4.5rem;
+    margin: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 5px rgb(82, 82, 82);
   }
 }
 
-.site-navigation.show {
+.site-navigation.hidden {
+  width: 4.5rem;
+  overflow: hidden;
   .top-nav {
-    display: flex;
-    background-color: #f68114;
-    height: 4.5rem;
-    box-shadow: 1px 1px 5px rgb(82, 82, 82);
-  }
-
-  .icon {
-    box-shadow: none;
+    display: none;
   }
 }
 
 @media (min-width: 700px) {
+  .site-navigation.hidden,
   .site-navigation {
     top: 375px;
     right: 0;
@@ -62,9 +55,11 @@
     display: flex;
     .top-nav {
       display: block;
-
       li {
-        margin-top: 1rem;
+        margin: 0.5rem 0;
+      }
+      a {
+        font-size: 1.5rem;
       }
     }
     .icon {
