@@ -28,4 +28,17 @@
     justify-content: space-around;
     background-color: #f68114;
   }
+
+  @media (min-width: 1000px) {
+    .project-feature {
+      display: flex;
+      margin-top: 3rem;
+      img {
+        max-width: 50%;
+      }
+      .project-feature-content {
+        margin-left: 0.5rem;
+      }
+    }
+  }
 }

@@ -61,8 +61,10 @@ const Project = () => {
                 {restData.acf.features.map((feature) => (
                   <div key={feature} className="project-feature">
                     <img src={`${feature.feature_img.url}`} alt=""></img>
-                    <h3>{feature.feature_title}</h3>
-                    <p>{feature.feature_description}</p>
+                    <div className="project-feature-content">
+                      <h3>{feature.feature_title}</h3>
+                      <p>{feature.feature_description}</p>
+                    </div>
                   </div>
                 ))}
               </section>
