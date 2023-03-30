@@ -39,13 +39,13 @@ const Project = () => {
                 <img src={`${restData.acf.hero_img.url}`} alt=""></img>
               )}
             </header>
-            <section>
+            <section className="project-page-description">
               <h2>Description</h2>
               <p>{restData.acf.description}</p>
             </section>
 
             {restData.acf.skills_used && restData.acf.skills_used.length > 0 && (
-              <section>
+              <section className="project-page-skills">
                 <h2>Skills Used</h2>
                 <ul>
                   {restData.acf.skills_used.map((skills) => (
@@ -56,10 +56,10 @@ const Project = () => {
             )}
 
             {restData.acf.features && (
-              <section>
-                <h2>Features</h2>
+              <section className="project-page-features">
+                <h2>Key Features</h2>
                 {restData.acf.features.map((feature) => (
-                  <div key={feature}>
+                  <div key={feature} className="project-feature">
                     <img src={`${feature.feature_img.url}`} alt=""></img>
                     <h3>{feature.feature_title}</h3>
                     <p>{feature.feature_description}</p>
@@ -69,14 +69,14 @@ const Project = () => {
             )}
 
             {restData.acf.takeaways && (
-              <section>
+              <section className="project-page-takeaways">
                 <h2>Takeaways</h2>
                 <p>{restData.acf.takeaways}</p>
               </section>
             )}
 
             {(restData.acf.git_link || restData.acf.live_site_link) && (
-              <section>
+              <section className="project-page-links">
                 {restData.acf.git_link && (
                   <p>
                     <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>

@@ -41,23 +41,27 @@ const Home = () => {
           <h2>Portfolio</h2>
           {restData.slice(0, numProjects).map((post) => (
             <article key={post.id} id={`post-${post.id}`} className="project">
-              <Link to={`/${post.slug}`}>
-                {post.acf.mobile_hero.url ? (
-                  <picture>
-                    <source media="(min-width: 650px)" srcSet={`${post.acf.hero_img.url}`} />
-                    <img src={`${post.acf.mobile_hero.url}`} alt=""></img>
-                  </picture>
-                ) : (
-                  <img src={`${post.acf.hero_img.url}`} alt=""></img>
-                )}
-              </Link>
-              <Link to={`/${post.slug}`}>
-                <h3>{post.title.rendered}</h3>
-              </Link>
-              <p>{post.acf.description}</p>
-              <Link to={`/${post.slug}`}>
-                <p>View Full Project Page</p>
-              </Link>
+              <div className="project-content-wrapper">
+                <Link to={`/${post.slug}`}>
+                  {post.acf.mobile_hero.url ? (
+                    <picture>
+                      <source media="(min-width: 650px)" srcSet={`${post.acf.hero_img.url}`} />
+                      <img src={`${post.acf.mobile_hero.url}`} alt=""></img>
+                    </picture>
+                  ) : (
+                    <img src={`${post.acf.hero_img.url}`} alt=""></img>
+                  )}
+                </Link>
+                <Link to={`/${post.slug}`}>
+                  <h3>{post.title.rendered}</h3>
+                </Link>
+                <div className="project-overview">
+                  <p>{post.acf.project_overview}</p>
+                </div>
+                <Link to={`/${post.slug}`}>
+                  <p className="project-btn">View Full Project Page</p>
+                </Link>
+              </div>
             </article>
           ))}
           {isMoreProjects && (
