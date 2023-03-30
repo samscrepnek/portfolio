@@ -26,6 +26,9 @@
       font-size: 1.25rem;
       color: inherit;
     }
+    a.active {
+      text-decoration: underline;
+    }
   }
   .icon {
     width: 4.5rem;
@@ -64,9 +67,6 @@
         font-size: 1.5rem;
       }
       a:hover {
-        text-decoration: underline;
-      }
-      a.active {
         text-decoration: underline;
       }
     }

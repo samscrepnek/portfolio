@@ -8,11 +8,19 @@
     text-align: center;
   }
 
+  .about-lists {
+    section {
+      max-width: 335px;
+    }
+  }
+
   @media (min-width: 1000px) {
     .about-lists {
       display: flex;
       section {
         width: 50%;
+      }
+      .wysiwyg-list {
       }
     }
   }
