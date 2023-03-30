@@ -38,7 +38,7 @@ const Home = () => {
     <>
       {isLoaded ? (
         <div className="portfolio">
-          <h2>Portfolio</h2>
+          <h2>Featured Works</h2>
           {restData.slice(0, numProjects).map((post) => (
             <article key={post.id} id={`post-${post.id}`} className="project">
               <div className="project-content-wrapper">

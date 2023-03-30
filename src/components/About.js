@@ -24,7 +24,7 @@ const About = () => {
     <>
       {isLoaded ? (
         <div id="page-about">
-          <h1>{restData.title.rendered}</h1>
+          {/* <h1>{restData.title.rendered}</h1> */}
           <section className="about-biography">
             <p>{restData.acf.biography}</p>
           </section>

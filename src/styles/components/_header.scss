@@ -8,19 +8,29 @@
     flex-wrap: wrap;
     align-content: center;
     height: 20rem;
+    max-width: 485px;
 
     h1,
     h2 {
       width: 100%;
       margin-left: 0.5rem;
+      margin-right: 0.5rem;
       font-weight: 500;
+    }
+  }
+
+  @media (min-width: 500px) {
+    .site-branding {
+      margin: 0 auto;
     }
   }
 
   @media (min-width: 700px) {
     padding-left: 10rem;
-    padding-right: 10rem;
+
     .site-branding {
+      max-width: 100%;
+      align-content: start;
       h1,
       h2 {
         font-weight: 700;
@@ -28,10 +38,22 @@
 
       h1 {
         font-size: 3rem;
+        margin-bottom: 0;
       }
 
       h2 {
         font-size: 2rem;
+      }
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .site-branding {
+      h1 {
+        font-size: 3.5rem;
+      }
+      h2 {
+        font-size: 2.5rem;
       }
     }
   }

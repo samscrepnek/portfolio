@@ -50,7 +50,7 @@ function App() {
           <ul className="top-nav">
             <li>
               <NavLink to="/" end>
-                Home
+                Portfolio
               </NavLink>
             </li>
             <li>
