@@ -11,12 +11,14 @@
   right: 0;
   box-shadow: 1px 1px 5px rgb(82, 82, 82);
   transition: width 1s ease;
+  overflow: hidden;
 
   .top-nav {
     display: flex;
     align-items: center;
     padding-inline-start: 0;
     margin-left: 0.5rem;
+    min-width: 275px;
     li {
       list-style: none;
       margin-right: 1rem;
@@ -31,14 +33,19 @@
     }
   }
   .icon {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 55px;
+    height: 55px;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
+    border-radius: 25px;
     border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #f68114;
     svg {
       pointer-events: none;
       color: white;
@@ -47,7 +54,8 @@
 }
 
 .site-navigation.hidden {
-  width: 4.5rem;
+  width: 55px;
+  height: 55px;
   overflow: hidden;
   .top-nav {
     display: none;
