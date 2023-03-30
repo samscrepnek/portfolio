@@ -13,6 +13,26 @@
     h2 {
       width: 100%;
       margin-left: 0.5rem;
+      font-weight: 500;
+    }
+  }
+
+  @media (min-width: 700px) {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    .site-branding {
+      h1,
+      h2 {
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
     }
   }
 }

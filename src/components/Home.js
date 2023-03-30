@@ -60,7 +60,11 @@ const Home = () => {
               </Link>
             </article>
           ))}
-          {isMoreProjects && <p onClick={handleChange}>Load More Projects</p>}
+          {isMoreProjects && (
+            <p onClick={handleChange} className="load-more-btn">
+              Load More Projects
+            </p>
+          )}
         </div>
       ) : (
         <Loading />

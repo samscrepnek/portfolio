@@ -66,6 +66,9 @@
       a:hover {
         text-decoration: underline;
       }
+      a.active {
+        text-decoration: underline;
+      }
     }
     .icon {
       display: none;

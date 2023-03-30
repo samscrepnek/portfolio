@@ -28,14 +28,16 @@ const About = () => {
           <section className="about-biography">
             <p>{restData.acf.biography}</p>
           </section>
-          <section className="about-skills">
-            <h2>Technical Skills</h2>
-            <div dangerouslySetInnerHTML={{ __html: restData.acf.technical_skills }}></div>
-          </section>
-          <section className="about-hobbies">
-            <h2>Hobbies</h2>
-            <div dangerouslySetInnerHTML={{ __html: restData.acf.hobbies }}></div>
-          </section>
+          <div className="about-lists">
+            <section className="about-skills">
+              <h2>Technical Skills</h2>
+              <div dangerouslySetInnerHTML={{ __html: restData.acf.technical_skills }} className="wysiwyg-list"></div>
+            </section>
+            <section className="about-hobbies">
+              <h2>Hobbies</h2>
+              <div dangerouslySetInnerHTML={{ __html: restData.acf.hobbies }} className="wysiwyg-list"></div>
+            </section>
+          </div>
         </div>
       ) : (
         <Loading />
