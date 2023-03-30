@@ -1,5 +1,9 @@
 #page-contact {
   color: white;
+  margin: 0 0.5rem;
+  h1 {
+    text-align: center;
+  }
 
   a {
     text-decoration: none;
@@ -8,5 +12,11 @@
 
   .contact-links {
     text-align: center;
+  }
+
+  .contact-description {
+    max-width: 526px;
+    display: block;
+    margin: 0 auto;
   }
 }
