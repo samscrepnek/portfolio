@@ -65,9 +65,11 @@ const Home = () => {
             </article>
           ))}
           {isMoreProjects && (
-            <button onClick={handleChange} className="load-more-btn">
-              Load More Projects
-            </button>
+            <div className="load-more-btn-container">
+              <button onClick={handleChange} className="load-more-btn">
+                Load More Projects
+              </button>
+            </div>
           )}
         </div>
       ) : (
