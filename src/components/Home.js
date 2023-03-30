@@ -59,15 +59,15 @@ const Home = () => {
                   <p>{post.acf.project_overview}</p>
                 </div>
                 <Link to={`/${post.slug}`}>
-                  <p className="project-btn">View Full Project Page</p>
+                  <button className="project-btn">View Full Project Page</button>
                 </Link>
               </div>
             </article>
           ))}
           {isMoreProjects && (
-            <p onClick={handleChange} className="load-more-btn">
+            <button onClick={handleChange} className="load-more-btn">
               Load More Projects
-            </p>
+            </button>
           )}
         </div>
       ) : (

@@ -42,8 +42,10 @@ const Contact = () => {
           <section className="contact-description">
             <p>{restData.acf.description}</p>
           </section>
-          <section className="contact-links">
-            <p onClick={copyEmailToClipboard}>{!emailCopied ? "Copy Email" : "Email Copied"}</p>
+          <nav className="contact-links">
+            <button onClick={copyEmailToClipboard} className="contact-email-btn">
+              {!emailCopied ? "Copy Email" : "Email Copied"}
+            </button>
 
             <p>
               <a href={`${restData.acf.linkedin}`} target="_blank" rel="noreferrer">
@@ -55,7 +57,7 @@ const Contact = () => {
                 GitHub
               </a>
             </p>
-          </section>
+          </nav>
         </div>
       ) : (
         <Loading />
