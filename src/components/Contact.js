@@ -38,7 +38,6 @@ const Contact = () => {
     <>
       {isLoaded ? (
         <div id="page-contact">
-          {/* <h1>{restData.title.rendered}</h1> */}
           <section className="contact-description">
             <p>{restData.acf.description}</p>
           </section>
