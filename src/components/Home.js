@@ -46,10 +46,10 @@ const Home = () => {
                   {post.acf.mobile_hero.url ? (
                     <picture>
                       <source media="(min-width: 650px)" srcSet={`${post.acf.hero_img.url}`} />
-                      <img src={`${post.acf.mobile_hero.url}`} alt=""></img>
+                      <img src={`${post.acf.mobile_hero.url}`} alt={`${post.acf.mobile_hero.alt}`}></img>
                     </picture>
                   ) : (
-                    <img src={`${post.acf.hero_img.url}`} alt=""></img>
+                    <img src={`${post.acf.hero_img.url}`} alt={`${post.acf.hero_img.alt}`}></img>
                   )}
                 </Link>
                 <Link to={`/${post.slug}`}>
