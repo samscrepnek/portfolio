@@ -41,7 +41,8 @@ const Project = () => {
             </header>
             <section className="project-page-description">
               <h2>Description</h2>
-              <p>{restData.acf.description}</p>
+              <div dangerouslySetInnerHTML={{ __html: restData.acf.description }} className="wysiwyg-description"></div>
+              {/* <p>{restData.acf.description}</p> */}
             </section>
 
             {restData.acf.skills_used && restData.acf.skills_used.length > 0 && (
@@ -60,7 +61,7 @@ const Project = () => {
                 <h2>Key Features</h2>
                 {restData.acf.features.map((feature) => (
                   <div key={feature} className="project-feature">
-                    <img src={`${feature.feature_img.url}`} alt={`${feature.feature_img.alt}`}></img>
+                    {feature.feature_img.url && <img src={`${feature.feature_img.url}`} alt={`${feature.feature_img.alt}`}></img>}
                     <div className="project-feature-content">
                       <h3>{feature.feature_title}</h3>
                       <p>{feature.feature_description}</p>
