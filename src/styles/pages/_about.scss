@@ -1,3 +1,5 @@
+@use "../defaults/variables" as *;
+
 #page-about {
   color: white;
   margin-left: 0.5rem;
@@ -8,16 +10,62 @@
     text-align: center;
   }
 
-  .skills-list .skill.hide {
-    display: none;
-  }
-
   .about-lists {
     section {
       max-width: 335px;
       display: block;
       margin: 0 auto;
+      font-size: 1rem;
     }
+  }
+
+  .skills-list-items .skill.hide {
+    display: none;
+  }
+
+  .skills-list-container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.5rem $dark_blue;
+  }
+  .skills-filters-div {
+    display: flex;
+    flex-wrap: wrap;
+
+    .skills-filter {
+      font-size: 1.25rem;
+      margin: 0 0.5rem 0.5rem;
+      padding: 0.5rem;
+      background-color: $orange;
+      color: white;
+      border: none;
+      box-shadow: 1px 2px 2px $orange;
+    }
+
+    .skills-filter:hover {
+      background-color: $blue;
+      box-shadow: 1px 2px 2px $dark_blue;
+    }
+
+    .skills-filter.active {
+      background-color: $blue;
+      box-shadow: 1px 2px 2px $dark_blue;
+    }
+  }
+
+  .skills-list-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skill {
+    color: black;
+    font-size: 1rem;
+    border: 2px solid $blue;
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin: 0.5rem;
   }
 
   @media (min-width: 1000px) {

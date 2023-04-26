@@ -24,21 +24,33 @@ const About = () => {
     let selectedFilter = event.target;
     let itemsToHide = [];
     let itemsToShow = [];
+    let unactiveFilter = [];
+
+    if (selectedFilter.classList.contains("active")) {
+      return;
+    } else {
+      unactiveFilter = document.querySelectorAll(`.skills-filters-div .skills-filter`);
+      unactiveFilter.forEach((el) => {
+        el.classList.remove("active");
+      });
+      selectedFilter.classList.add("active");
+    }
+
     if (selectedFilter.classList.contains("development")) {
-      itemsToHide = document.querySelectorAll(`.skills-list .skill:not(.development)`);
-      itemsToShow = document.querySelectorAll(`.skills-list .skill.development`);
+      itemsToHide = document.querySelectorAll(`.skills-list-items .skill:not(.development)`);
+      itemsToShow = document.querySelectorAll(`.skills-list-items .skill.development`);
     }
     if (selectedFilter.classList.contains("design")) {
-      itemsToHide = document.querySelectorAll(`.skills-list .skill:not(.design)`);
-      itemsToShow = document.querySelectorAll(`.skills-list .skill.design`);
+      itemsToHide = document.querySelectorAll(`.skills-list-items .skill:not(.design)`);
+      itemsToShow = document.querySelectorAll(`.skills-list-items .skill.design`);
     }
     if (selectedFilter.classList.contains("other")) {
-      itemsToHide = document.querySelectorAll(`.skills-list .skill:not(.other)`);
-      itemsToShow = document.querySelectorAll(`.skills-list .skill.other`);
+      itemsToHide = document.querySelectorAll(`.skills-list-items .skill:not(.other)`);
+      itemsToShow = document.querySelectorAll(`.skills-list-items .skill.other`);
     }
     if (selectedFilter.classList.contains("all")) {
       itemsToHide = [];
-      itemsToShow = document.querySelectorAll(`.skills-list .skill`);
+      itemsToShow = document.querySelectorAll(`.skills-list-items .skill`);
     }
 
     itemsToHide.forEach((el) => {
@@ -62,28 +74,30 @@ const About = () => {
           </section>
           <section className="about-skills">
             <h2>My Technical Skills</h2>
-            <div className="skills-filters-div" onClick={handleChange}>
-              <button className="development skills-filter">Development</button>
-              <button className="design skills-filter">Design</button>
-              <button className="other skills-filter">Other</button>
-              <button className="all skills-filter">All</button>
-            </div>
-            <div className="skills-list">
-              {restData.acf.development_skills.map((feature) => (
-                <p key={feature} className="development skill">
-                  {feature.development_skill}
-                </p>
-              ))}
-              {restData.acf.design_skills.map((feature) => (
-                <p key={feature} className="design skill">
-                  {feature.design_skill}
-                </p>
-              ))}
-              {restData.acf.other_skills.map((feature) => (
-                <p key={feature} className="other skill">
-                  {feature.other_skill}
-                </p>
-              ))}
+            <div className="skills-list-container">
+              <div className="skills-filters-div" onClick={handleChange}>
+                <button className="all skills-filter active">All</button>
+                <button className="development skills-filter">Development</button>
+                <button className="design skills-filter">Design</button>
+                <button className="other skills-filter">Other</button>
+              </div>
+              <div className="skills-list-items">
+                {restData.acf.development_skills.map((feature) => (
+                  <p key={feature} className="development skill">
+                    {feature.development_skill}
+                  </p>
+                ))}
+                {restData.acf.design_skills.map((feature) => (
+                  <p key={feature} className="design skill">
+                    {feature.design_skill}
+                  </p>
+                ))}
+                {restData.acf.other_skills.map((feature) => (
+                  <p key={feature} className="other skill">
+                    {feature.other_skill}
+                  </p>
+                ))}
+              </div>
             </div>
           </section>
         </div>

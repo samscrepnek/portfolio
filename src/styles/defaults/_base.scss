@@ -1,4 +1,6 @@
 @use "fonts" as *;
+@use "variables" as *;
+
 body {
   background-color: rgb(255, 255, 255);
   margin: 0;
@@ -25,7 +27,7 @@ body {
   }
 
   main {
-    background-color: #2480e2;
+    background-color: $blue;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 
