@@ -68,6 +68,30 @@
     margin: 0.5rem;
   }
 
+  .about-cta {
+    .cta-wrapper {
+      width: 224px;
+      display: block;
+      margin: 0 auto;
+    }
+    a {
+      text-decoration: none;
+    }
+    button {
+      background-color: $orange;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      width: 14rem;
+      display: block;
+      margin: 2.5rem auto 0;
+      color: white;
+      border: 2px solid $orange;
+    }
+    button:hover {
+      border: 2px solid white;
+    }
+  }
+
   @media (min-width: 1000px) {
     .about-lists {
       display: flex;

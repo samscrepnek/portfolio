@@ -1,3 +1,5 @@
+@use "../defaults/variables" as *;
+
 .portfolio {
   padding-top: 1rem;
 
@@ -39,18 +41,18 @@
       }
 
       .project-btn {
-        background-color: #f68114;
+        background-color: $orange;
         padding: 0.5rem 1rem;
         border-radius: 6px;
         width: 14rem;
         display: block;
         margin: 2.5rem auto 0;
         color: white;
-        border: none;
+        border: 2px solid $orange;
       }
 
       .project-btn:hover {
-        text-decoration: underline;
+        border: 2px solid $blue;
       }
     }
   }
@@ -65,12 +67,11 @@
     padding: 1rem 2rem;
     border-radius: 25px;
     box-shadow: 1px 1px 5px rgb(82, 82, 82);
-    border: none;
+    border: 2px solid $orange;
   }
 
   .load-more-btn:hover {
-    text-decoration: underline;
-    font-size: 1.05rem;
+    border: 2px solid white;
   }
 
   @media (min-width: 500px) {

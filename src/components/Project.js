@@ -27,7 +27,7 @@ const Project = () => {
     <>
       {isLoaded ? (
         <>
-          <div className="project-page" id={`${slug}`}>
+          <div className="page-wrapper project-page" id={`${slug}`}>
             <header>
               <h1>{restData.title.rendered}</h1>
               {restData.acf.mobile_hero.url ? (

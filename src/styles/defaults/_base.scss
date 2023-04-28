@@ -6,6 +6,10 @@ body {
   margin: 0;
   font-family: $main-font;
 
+  button {
+    cursor: pointer;
+  }
+
   h1,
   h2,
   h3,
