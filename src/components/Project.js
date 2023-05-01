@@ -48,11 +48,13 @@ const Project = () => {
             {restData.acf.skills_used && restData.acf.skills_used.length > 0 && (
               <section className="project-page-skills">
                 <h2>Skills Used</h2>
-                <ul>
-                  {restData.acf.skills_used.map((skills) => (
-                    <li key={skills}>{skills}</li>
-                  ))}
-                </ul>
+                <div className="skills-list">
+                  <ul>
+                    {restData.acf.skills_used.map((skills) => (
+                      <li key={skills}>{skills}</li>
+                    ))}
+                  </ul>
+                </div>
               </section>
             )}
 
