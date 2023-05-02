@@ -58,6 +58,12 @@
     }
   }
 
+  .project-page-features {
+    .project-feature {
+      margin-top: 3rem;
+    }
+  }
+
   .project-page-links {
     display: flex;
     justify-content: space-around;
@@ -73,12 +79,8 @@
         width: 100%;
       }
       .project-feature {
-        // display: flex;
-        margin-top: 3rem;
+        margin-top: 0rem;
         max-width: 46%;
-        // img {
-        //   max-width: 50%;
-        // }
         .project-feature-content {
           margin-left: 0.5rem;
         }
