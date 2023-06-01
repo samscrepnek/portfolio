@@ -1,3 +1,5 @@
+// Code from https://codepen.io/plasm/pen/XMeZXV //
+
 const Background = () => {
   class Particle {
     constructor(svg, coordinates, friction) {
