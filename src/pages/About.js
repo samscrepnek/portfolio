@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import Loading from "./Loading";
+import Loading from "../components/Loading";
 import { Link } from "react-router-dom";
+import Contact from "../components/Contact";
 
 const About = () => {
   const restPath = "https://samscrepnek.ca/qM3B3Db6DyVW5YPK/wp-json/wp/v2/pages/30?_embed";
@@ -68,7 +69,7 @@ const About = () => {
   return (
     <>
       {isLoaded ? (
-        <div calssName="page-wrapper" id="page-about">
+        <div className="page-wrapper" id="page-about">
           <section className="about-biography">
             <h2>About Me</h2>
             <p>{restData.acf.biography}</p>
@@ -108,6 +109,7 @@ const About = () => {
               </Link>
             </div>
           </section>
+          <Contact />
         </div>
       ) : (
         <Loading />
