@@ -19,6 +19,9 @@ const Portfolio = () => {
         setProjectTotal(data.length);
         setData(data);
         setLoadStatus(true);
+        if (data.length <= numProjects) {
+          setMoreProjects(false);
+        }
       } else {
         setLoadStatus(false);
       }
@@ -27,7 +30,7 @@ const Portfolio = () => {
   }, [restPath]);
 
   function handleChange() {
-    let loadNum = numProjects + 2;
+    let loadNum = numProjects + 3;
     if (loadNum >= projectTotal) {
       setMoreProjects(false);
       loadNum = projectTotal;
