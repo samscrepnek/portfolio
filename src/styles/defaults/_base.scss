@@ -27,14 +27,22 @@ body {
     margin: 0 auto;
   }
 
-  main {
+  .section-wrapper {
     background-color: $blue;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-
-    @media (min-width: 700px) {
+    padding: 1.5rem 0.5rem;
+    @media (min-width: 900px) {
       padding-left: 10rem;
       padding-right: 10rem;
     }
+  }
+  main {
+    // background-color: $blue;
+    // padding-top: 1.5rem;
+    // padding-bottom: 1.5rem;
+
+    // // @media (min-width: 700px) {
+    // //   padding-left: 10rem;
+    // //   padding-right: 10rem;
+    // // }
   }
 }

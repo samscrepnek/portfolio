@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <>
       {isLoaded ? (
-        <div className="page-wrapper" id="page-contact">
+        <div className="page-wrapper section-wrapper" id="page-contact">
           <section className="contact-description">
             <p>{restData.acf.description}</p>
           </section>

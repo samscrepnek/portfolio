@@ -70,45 +70,47 @@ const About = () => {
     <>
       {isLoaded ? (
         <div className="page-wrapper" id="page-about">
-          <section className="about-biography">
-            <h2>About Me</h2>
-            <p>{restData.acf.biography}</p>
-          </section>
-          <section className="about-skills">
-            <h2>My Technical Skills</h2>
-            <div className="skills-list-container">
-              <div className="skills-filters-div" onClick={handleChange}>
-                <button className="all skills-filter active">All</button>
-                <button className="development skills-filter">Development</button>
-                <button className="design skills-filter">Design</button>
-                <button className="other skills-filter">Other</button>
+          <div className="about-sections section-wrapper">
+            <section className="about-biography">
+              <h2>About Me</h2>
+              <p>{restData.acf.biography}</p>
+            </section>
+            <section className="about-skills">
+              <h2>My Technical Skills</h2>
+              <div className="skills-list-container">
+                <div className="skills-filters-div" onClick={handleChange}>
+                  <button className="all skills-filter active">All</button>
+                  <button className="development skills-filter">Development</button>
+                  <button className="design skills-filter">Design</button>
+                  <button className="other skills-filter">Other</button>
+                </div>
+                <div className="skills-list-items">
+                  {restData.acf.development_skills.map((feature) => (
+                    <p key={feature} className="development skill">
+                      {feature.development_skill}
+                    </p>
+                  ))}
+                  {restData.acf.design_skills.map((feature) => (
+                    <p key={feature} className="design skill">
+                      {feature.design_skill}
+                    </p>
+                  ))}
+                  {restData.acf.other_skills.map((feature) => (
+                    <p key={feature} className="other skill">
+                      {feature.other_skill}
+                    </p>
+                  ))}
+                </div>
               </div>
-              <div className="skills-list-items">
-                {restData.acf.development_skills.map((feature) => (
-                  <p key={feature} className="development skill">
-                    {feature.development_skill}
-                  </p>
-                ))}
-                {restData.acf.design_skills.map((feature) => (
-                  <p key={feature} className="design skill">
-                    {feature.design_skill}
-                  </p>
-                ))}
-                {restData.acf.other_skills.map((feature) => (
-                  <p key={feature} className="other skill">
-                    {feature.other_skill}
-                  </p>
-                ))}
+            </section>
+            <section className="about-cta">
+              <div className="cta-wrapper">
+                <Link to="/portfolio">
+                  <button>View Portfolio</button>
+                </Link>
               </div>
-            </div>
-          </section>
-          <section className="about-cta">
-            <div className="cta-wrapper">
-              <Link to="/">
-                <button>View Portfolio</button>
-              </Link>
-            </div>
-          </section>
+            </section>
+          </div>
           <Contact />
         </div>
       ) : (
