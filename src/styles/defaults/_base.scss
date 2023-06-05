@@ -27,13 +27,15 @@ body {
     margin: 0 auto;
   }
 
-  .section-wrapper {
+  .section-wrapper,
+  .project-page {
     background-color: $blue;
     padding: 1.5rem 0.5rem;
-    @media (min-width: 900px) {
-      padding-left: 10rem;
-      padding-right: 10rem;
-    }
+  }
+
+  .page-wrapper {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   main {
     // background-color: $blue;

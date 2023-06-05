@@ -2,8 +2,6 @@
 
 #page-about {
   color: white;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 
   h1,
   h2 {
@@ -89,6 +87,12 @@
     }
     button:hover {
       border: 2px solid white;
+    }
+  }
+  .about-sections {
+    @media (min-width: 900px) {
+      padding-left: 10rem;
+      padding-right: 10rem;
     }
   }
 

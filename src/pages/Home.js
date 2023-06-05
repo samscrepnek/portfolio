@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <>
       {isLoaded ? (
-        <div className="page-wrapper portfolio">
+        <div className="page-wrapper featured-works">
           <section>
             <h2>Recent Work</h2>
             {restData.slice(0, 3).map((post) => (
