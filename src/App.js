@@ -5,10 +5,12 @@ import Project from "./pages/Project";
 import Portfolio from "./pages/Portfolio";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Background from "./components/Background";
 
 function App() {
   return (
     <Router basename="/">
+      <Background />
       <div className="site-wrapper">
         <Nav />
         <header id="masthead" className="site-header">
