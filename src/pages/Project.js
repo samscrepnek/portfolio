@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
+import Contact from "../components/Contact";
 
 const Project = () => {
   const { slug } = useParams();
@@ -27,7 +28,7 @@ const Project = () => {
     <>
       {isLoaded ? (
         <>
-          <div className="page-wrapper project-page" id={`${slug}`}>
+          <div className=" project-page" id={`${slug}`}>
             <header>
               <h1>{restData.title.rendered}</h1>
               {restData.acf.mobile_hero.url ? (
@@ -82,21 +83,23 @@ const Project = () => {
 
             {(restData.acf.git_link || restData.acf.live_site_link) && (
               <section className="project-page-links">
-                {restData.acf.git_link && (
-                  <p>
-                    <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>
-                      {restData.acf.git_link.title}
-                    </a>
-                  </p>
-                )}
+                <div className="project-links-wrapper">
+                  {restData.acf.git_link && (
+                    <p>
+                      <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>
+                        {restData.acf.git_link.title}
+                      </a>
+                    </p>
+                  )}
 
-                {restData.acf.live_site_link && (
-                  <p>
-                    <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
-                      {restData.acf.live_site_link.title}
-                    </a>
-                  </p>
-                )}
+                  {restData.acf.live_site_link && (
+                    <p>
+                      <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
+                        {restData.acf.live_site_link.title}
+                      </a>
+                    </p>
+                  )}
+                </div>
               </section>
             )}
             {/* <nav className="posts-navigation">
@@ -107,6 +110,7 @@ const Project = () => {
             )}
           </nav> */}
           </div>
+          <Contact />
         </>
       ) : (
         <Loading />
