@@ -1,6 +1,10 @@
 @use "fonts" as *;
 @use "variables" as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   margin: 0;
@@ -36,6 +40,11 @@ body {
   .page-wrapper {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+
+  .loading {
+    display: block;
+    margin: 0 auto;
   }
   main {
     // background-color: $blue;
