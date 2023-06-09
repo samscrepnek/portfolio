@@ -105,7 +105,12 @@ const About = () => {
             </section>
             <section className="about-cta">
               <div className="cta-wrapper">
-                <Link to="/portfolio">
+                <Link
+                  to="/portfolio"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                >
                   <button>View Portfolio</button>
                 </Link>
               </div>

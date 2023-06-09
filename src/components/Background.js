@@ -17,7 +17,7 @@ const Background = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        fullScreen: false,
+        fullScreen: true,
         background: {
           color: { value: "#0000000" },
         },
