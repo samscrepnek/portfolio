@@ -9,7 +9,11 @@
     align-content: center;
     height: 20rem;
     max-width: 485px;
+    text-align: center;
 
+    h1 {
+      text-transform: uppercase;
+    }
     h1,
     h2 {
       width: 100%;
@@ -26,16 +30,11 @@
   }
 
   @media (min-width: 700px) {
-    padding-left: 10rem;
     margin-top: 15rem;
 
     .site-branding {
       max-width: 100%;
       align-content: start;
-      h1,
-      h2 {
-        font-weight: 700;
-      }
 
       h1 {
         font-size: 3rem;

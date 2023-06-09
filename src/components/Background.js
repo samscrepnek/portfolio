@@ -37,3 +37,5 @@ const Background = () => {
   );
 };
 export default Background;
+
+// code from https://www.getisotope.com/post/react-animated-background //
