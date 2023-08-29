@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
-import Contact from "../components/Contact";
+// import Contact from "../components/Contact";
 
 const Home = () => {
   const restPath = "https://samscrepnek.ca/qM3B3Db6DyVW5YPK/wp-json/wp/v2/pinkmug-project?_embed&acf_format=standard";
@@ -66,7 +66,7 @@ const Home = () => {
                 ))}
               </div>
             </section>
-            <section className="home-cta">
+            {/* <section className="home-cta">
               <div className="cta-wrapper">
                 <Link
                   to="/portfolio"
@@ -77,9 +77,9 @@ const Home = () => {
                   <button>View Portfolio</button>
                 </Link>
               </div>
-            </section>
+            </section> */}
           </div>
-          <Contact />
+          {/* <Contact /> */}
         </div>
       ) : (
         <Loading />

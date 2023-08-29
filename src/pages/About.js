@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
-import { Link } from "react-router-dom";
-import Contact from "../components/Contact";
+// import { Link } from "react-router-dom";
+// import Contact from "../components/Contact";
 
 const About = () => {
   const restPath = "https://samscrepnek.ca/qM3B3Db6DyVW5YPK/wp-json/wp/v2/pages/30?_embed";
@@ -103,7 +103,7 @@ const About = () => {
                 </div>
               </div>
             </section>
-            <section className="about-cta">
+            {/* <section className="about-cta">
               <div className="cta-wrapper">
                 <Link
                   to="/portfolio"
@@ -114,9 +114,9 @@ const About = () => {
                   <button>View Portfolio</button>
                 </Link>
               </div>
-            </section>
+            </section> */}
           </div>
-          <Contact />
+          {/* <Contact /> */}
         </div>
       ) : (
         <Loading />

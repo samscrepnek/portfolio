@@ -5,26 +5,26 @@ import Project from "./pages/Project";
 import Portfolio from "./pages/Portfolio";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import Background from "./components/Background";
+// import Background from "./components/Background";
 
 function App() {
   return (
     <Router basename="/">
-      <Background />
+      {/* <Background /> */}
       <div className="site-wrapper">
         <Nav />
-        <header id="masthead" className="site-header">
+        {/* <header id="masthead" className="site-header">
           <div className="site-branding">
             <h1 className="site-title">Sam Screpnek</h1>
             <h2>Front-End Web Developer</h2>
           </div>
-        </header>
+        </header> */}
         <main id="main">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/:slug" element={<Project />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            {/* <Route path="/portfolio" element={<Portfolio />} /> */}
           </Routes>
         </main>
         <Footer />

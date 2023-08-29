@@ -1,3 +1,5 @@
+import CopyEmail from "./CopyEmail";
+
 const Footer = () => {
   function getYear() {
     return new Date().getFullYear();
@@ -5,8 +7,23 @@ const Footer = () => {
 
   return (
     <footer className="site-footer">
-      <p>Site made by Sam Screpnek.</p>
-      <p className="copyright">&copy;{getYear()}</p>
+      <ul>
+        <li>
+          <CopyEmail />
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/sam-screpnek-389927251" target="blank">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/samscrepnek" target="blank">
+            Github
+          </a>
+        </li>
+        <li>&copy;{getYear()} Sam Screpnek</li>
+        {/* <p className="copyright">&copy;{getYear()}</p> */}
+      </ul>
     </footer>
   );
 };
