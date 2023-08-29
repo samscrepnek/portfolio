@@ -21,7 +21,9 @@ const Nav = () => {
   return (
     <nav className="site-navigation hidden">
       <ul>
-        <li>Sam Screpnek</li>
+        <li>
+          <NavLink to="/">Sam Screpnek</NavLink>
+        </li>
         <li>
           <button className="icon" onClick={hamburger}>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
