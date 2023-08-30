@@ -3,15 +3,15 @@ import { NavLink } from "react-router-dom";
 import CopyEmail from "./CopyEmail";
 
 const Nav = () => {
-  useEffect(() => {
-    window.addEventListener("click", (event) => {
-      const nav = document.querySelector(".site-navigation");
-      const icon = document.querySelector(".icon");
-      if (event.target !== icon) {
-        nav.classList.add("hidden");
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("click", (event) => {
+  //     const nav = document.querySelector(".site-navigation");
+  //     const icon = document.querySelector(".icon");
+  //     if (event.target !== icon) {
+  //       nav.classList.add("hidden");
+  //     }
+  //   });
+  // }, []);
 
   // function openMenu() {
   //   const nav = document.querySelector(".nav-menu-container");
