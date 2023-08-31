@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import CopyEmail from "./CopyEmail";
 
@@ -33,16 +33,18 @@ const Nav = () => {
   return (
     <nav className="top-nav">
       <ul>
-        <li>
-          <NavLink to="/">Sam Screpnek</NavLink>
-        </li>
-        <li>
-          <button className="menu-icon" onClick={toggleMenu}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
-            </svg>
-          </button>
-        </li>
+        <div className="top-nav-inner-wrapper">
+          <li>
+            <NavLink to="/">Sam Screpnek</NavLink>
+          </li>
+          <li>
+            <button className="menu-icon" onClick={toggleMenu}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+              </svg>
+            </button>
+          </li>
+        </div>
         <div className="nav-menu-container hidden">
           <button className="close-icon" onClick={toggleMenu}>
             x

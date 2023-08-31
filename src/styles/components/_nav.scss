@@ -1,0 +1,25 @@
+.top-nav {
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  .top-nav-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-menu-container.hidden {
+    display: none;
+  }
+
+  .nav-menu-container {
+    z-index: 100;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
