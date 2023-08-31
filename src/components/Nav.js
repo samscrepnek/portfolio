@@ -1,15 +1,25 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import CopyEmail from "./CopyEmail";
 
 const Nav = () => {
   // useEffect(() => {
+  //   // const nav = document.querySelector(".nav-menu-container");
   //   window.addEventListener("click", (event) => {
-  //     const nav = document.querySelector(".site-navigation");
-  //     const icon = document.querySelector(".icon");
+  //     const nav = document.querySelector(".nav-menu-container");
+  //     const icon = document.querySelector(".menu-icon");
+  //     console.log(nav);
   //     if (event.target !== icon) {
   //       nav.classList.add("hidden");
   //     }
+  //     // nav.classList.add("hidden");
+  //   });
+  // }, []);
+
+  // useEffect(() => {
+  //   const nav = document.querySelector(".nav-menu-container");
+  //   nav.addEventListener("click", () => {
+  //     toggleMenu();
   //   });
   // }, []);
 
@@ -51,10 +61,14 @@ const Nav = () => {
           </button>
           <ul className="nav-menu">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/" onClick={toggleMenu}>
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about" onClick={toggleMenu}>
+                About
+              </NavLink>
             </li>
             <li>
               <CopyEmail />
