@@ -4,6 +4,10 @@
     padding-inline-start: 0;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .top-nav-inner-wrapper {
     display: flex;
     justify-content: space-between;
@@ -26,6 +30,17 @@
       position: absolute;
       right: 10px;
       top: 10px;
+    }
+
+    .nav-menu {
+      //   display: flex;
+      width: 100%;
+      text-align: center;
+      padding-top: 3.5rem;
+
+      li {
+        margin-top: 2rem;
+      }
     }
   }
 }
