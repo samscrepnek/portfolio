@@ -1,3 +1,7 @@
+img {
+  max-width: 350px;
+}
+
 .top-nav {
   ul {
     list-style: none;
@@ -20,7 +24,7 @@
   .nav-menu-container {
     z-index: 100;
     background-color: white;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
