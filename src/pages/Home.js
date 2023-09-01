@@ -26,32 +26,32 @@ const Home = () => {
     <>
       {isLoaded ? (
         <div className="page-wrapper">
-          <div className="section-wrapper recent-works">
-            <section>
-              <div className="home-works">
-                {restData.map((post) => (
+          <div className="portfolio">
+            <section className="works">
+              {/* <div className="home-works"> */}
+              {restData.map((post) => (
+                <article key={post.id} id={`post-${post.id}`} className="project">
                   <Link
                     to={`/${post.slug}`}
                     onClick={() => {
                       window.scroll(0, 0);
                     }}
                   >
-                    <article key={post.id} id={`post-${post.id}`} className="project">
-                      <div className="project-content-wrapper">
-                        {post.acf.mobile_hero.url ? (
-                          <picture>
-                            <source media="(min-width: 650px)" srcSet={`${post.acf.hero_img.url}`} />
-                            <img src={`${post.acf.mobile_hero.url}`} alt={`${post.acf.mobile_hero.alt}`}></img>
-                          </picture>
-                        ) : (
-                          <img src={`${post.acf.hero_img.url}`} alt={`${post.acf.hero_img.alt}`}></img>
-                        )}
-                        <h3>{post.title.rendered}</h3>
-                      </div>
-                    </article>
+                    <div className="project-content-wrapper">
+                      {post.acf.mobile_hero.url ? (
+                        <picture>
+                          <source media="(min-width: 650px)" srcSet={`${post.acf.hero_img.url}`} />
+                          <img src={`${post.acf.mobile_hero.url}`} alt={`${post.acf.mobile_hero.alt}`}></img>
+                        </picture>
+                      ) : (
+                        <img src={`${post.acf.hero_img.url}`} alt={`${post.acf.hero_img.alt}`}></img>
+                      )}
+                      <h3>{post.title.rendered}</h3>
+                    </div>
                   </Link>
-                ))}
-              </div>
+                </article>
+              ))}
+              {/* </div> */}
             </section>
           </div>
         </div>
