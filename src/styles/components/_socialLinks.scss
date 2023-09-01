@@ -1,0 +1,14 @@
+.social-links {
+  a {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      margin: 0 0.5rem;
+    }
+  }
+}

@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
-import Contact from "../components/Contact";
 
 const Project = () => {
   const { slug } = useParams();
@@ -110,7 +108,6 @@ const Project = () => {
             )}
           </nav> */}
           </div>
-          <Contact />
         </>
       ) : (
         <Loading />
