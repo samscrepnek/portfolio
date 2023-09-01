@@ -1,8 +1,12 @@
 .site-footer {
   text-align: center;
-  height: 6rem;
-  color: black;
-  margin-top: 2.5rem;
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+  a {
+    text-decoration: none;
+  }
 
   p {
     margin: 0;

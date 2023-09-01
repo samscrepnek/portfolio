@@ -21,9 +21,10 @@ const Footer = () => {
             Github
           </a>
         </li>
-        <li>&copy;{getYear()} Sam Screpnek</li>
+
         {/* <p className="copyright">&copy;{getYear()}</p> */}
       </ul>
+      <p>&copy;{getYear()} Sam Screpnek</p>
     </footer>
   );
 };
