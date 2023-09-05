@@ -1,9 +1,13 @@
+@use "../defaults/fonts" as *;
+
 .email-btn {
   border: none;
   background-color: transparent;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  font-family: $main-font;
+  font-size: 1rem;
 
   svg {
     margin: 0 0.5rem;
