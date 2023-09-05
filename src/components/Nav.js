@@ -45,7 +45,9 @@ const Nav = () => {
       <ul>
         <div className="top-nav-inner-wrapper">
           <li>
-            <NavLink to="/">Sam Screpnek</NavLink>
+            <NavLink to="/" className="name-home-link">
+              Sam Screpnek
+            </NavLink>
           </li>
           <li>
             <button className="menu-icon" onClick={toggleMenu}>

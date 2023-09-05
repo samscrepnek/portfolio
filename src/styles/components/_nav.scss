@@ -1,4 +1,5 @@
 .top-nav {
+  margin: 0 0.5rem;
   ul {
     list-style: none;
     padding-inline-start: 0;
@@ -6,11 +7,24 @@
 
   a {
     text-decoration: none;
+    color: black;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .name-home-link {
+    font-size: 1.2rem;
   }
 
   .top-nav-inner-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .nav-menu-container.hidden {
