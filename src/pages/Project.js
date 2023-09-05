@@ -44,6 +44,20 @@ const Project = () => {
               {/* <p>{restData.acf.description}</p> */}
             </section>
 
+            {(restData.acf.git_link || restData.acf.live_site_link) && (
+              <section className="project-page-links">
+                <div className="project-links-wrapper">
+                  {restData.acf.live_site_link && (
+                    <p>
+                      <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
+                        {restData.acf.live_site_link.title}
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </section>
+            )}
+
             {restData.acf.skills_used && restData.acf.skills_used.length > 0 && (
               <section className="project-page-skills">
                 <h2>Skills Used</h2>
@@ -61,7 +75,8 @@ const Project = () => {
               <section className="project-page-features">
                 <h2>Key Features</h2>
                 {restData.acf.features.map((feature) => (
-                  <div key={feature} className="project-feature">
+                  <div key={feature.feature_title} className="project-feature">
+                    {/* {console.log(feature)} */}
                     {feature.feature_img.url && <img src={`${feature.feature_img.url}`} alt={`${feature.feature_img.alt}`}></img>}
                     <div className="project-feature-content">
                       <h3>{feature.feature_title}</h3>
@@ -69,13 +84,6 @@ const Project = () => {
                     </div>
                   </div>
                 ))}
-              </section>
-            )}
-
-            {restData.acf.takeaways && (
-              <section className="project-page-takeaways">
-                <h2>Takeaways</h2>
-                <p>{restData.acf.takeaways}</p>
               </section>
             )}
 
@@ -89,17 +97,17 @@ const Project = () => {
                       </a>
                     </p>
                   )}
-
-                  {restData.acf.live_site_link && (
-                    <p>
-                      <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
-                        {restData.acf.live_site_link.title}
-                      </a>
-                    </p>
-                  )}
                 </div>
               </section>
             )}
+
+            {restData.acf.takeaways && (
+              <section className="project-page-takeaways">
+                <h2>Takeaways</h2>
+                <p>{restData.acf.takeaways}</p>
+              </section>
+            )}
+
             {/* <nav className="posts-navigation">
             {restData.previous_post["id"] && (
               <Link to={`/blog/${restData.previous_post["slug"]}`} className="prev-post">
