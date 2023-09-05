@@ -1,7 +1,7 @@
 @use "../defaults/variables" as *;
 
 .site-wrapper main .project-page {
-  color: white;
+  // color: white;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
 
@@ -10,9 +10,9 @@
     text-align: center;
   }
 
-  h2 {
-    border-bottom: 2px solid white;
-  }
+  //   h2 {
+  //     border-bottom: 2px solid white;
+  //   }
 
   a {
     color: white;
@@ -70,28 +70,28 @@
     background-color: $orange;
   }
 
-  section {
-    @media (min-width: 900px) {
-      padding-left: 10rem;
-      padding-right: 10rem;
-    }
-  }
+  //   section {
+  //     @media (min-width: 900px) {
+  //       padding-left: 10rem;
+  //       padding-right: 10rem;
+  //     }
+  //   }
 
-  @media (min-width: 1000px) {
-    .project-page-features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      h2 {
-        width: 100%;
-      }
-      .project-feature {
-        margin-top: 0rem;
-        max-width: 46%;
-        .project-feature-content {
-          margin-left: 0.5rem;
-        }
-      }
-    }
-  }
+  //   @media (min-width: 1000px) {
+  //     .project-page-features {
+  //       display: flex;
+  //       flex-wrap: wrap;
+  //       justify-content: space-around;
+  //       h2 {
+  //         width: 100%;
+  //       }
+  //       .project-feature {
+  //         margin-top: 0rem;
+  //         max-width: 46%;
+  //         .project-feature-content {
+  //           margin-left: 0.5rem;
+  //         }
+  //       }
+  //     }
+  //   }
 }
