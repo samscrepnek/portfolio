@@ -84,17 +84,17 @@ const About = () => {
                 </div>
                 <div className="skills-list-items">
                   {restData.acf.development_skills.map((feature) => (
-                    <p key={feature} className="development skill">
+                    <p key={feature.development_skill} className="development skill">
                       {feature.development_skill}
                     </p>
                   ))}
                   {restData.acf.design_skills.map((feature) => (
-                    <p key={feature} className="design skill">
+                    <p key={feature.design_skill} className="design skill">
                       {feature.design_skill}
                     </p>
                   ))}
                   {restData.acf.other_skills.map((feature) => (
-                    <p key={feature} className="other skill">
+                    <p key={feature.other_skill} className="other skill">
                       {feature.other_skill}
                     </p>
                   ))}
