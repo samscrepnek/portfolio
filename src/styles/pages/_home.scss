@@ -101,12 +101,17 @@
 // }
 
 .portfolio {
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+  }
   img {
     max-width: 190px;
   }
   .project {
     background-color: $orange;
     height: 228px;
+    max-width: 334px;
     width: 100%;
     overflow: hidden;
     margin: 1rem auto;
