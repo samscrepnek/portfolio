@@ -13,6 +13,8 @@
   ul {
     list-style: none;
     padding-inline-start: 0;
+    margin: 0 auto;
+    max-width: 1344px;
   }
 
   a {
@@ -35,6 +37,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 66px;
   }
 
   .nav-menu-container.hidden {
@@ -49,6 +52,12 @@
     right: 0;
     left: 0;
     bottom: 0;
+
+    .nav-menu-wrapper {
+      max-width: 1344px;
+      position: relative;
+      margin: 0 auto;
+    }
 
     .close-icon {
       position: absolute;
