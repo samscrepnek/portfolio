@@ -102,7 +102,7 @@
 
 .portfolio {
   .works {
-    display: flex;
+    // display: flex;
     flex-wrap: wrap;
   }
   img {
@@ -111,10 +111,10 @@
   .project {
     background-color: $orange;
     height: 228px;
-    max-width: 334px;
+    max-width: 432px;
     width: 100%;
     overflow: hidden;
-    margin: 1rem auto;
+    margin: 0.5rem auto 0;
     display: flex;
     justify-content: center;
     position: relative;
@@ -122,6 +122,22 @@
       position: absolute;
       top: 84px;
       left: 48px;
+    }
+  }
+
+  @media (min-width: 904px) {
+    .works {
+      display: grid;
+      grid-template-columns: 432px 432px;
+      grid-template-rows: auto;
+      column-gap: 8px;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 1344px) {
+    .works {
+      grid-template-columns: 432px 432px 432px;
     }
   }
 }
