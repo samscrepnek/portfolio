@@ -38,6 +38,10 @@ const Home = () => {
                     }}
                   >
                     <div className="project-content-wrapper">
+                      <div className="title-div">
+                        <div className="hover-background"></div>
+                        <h3>{post.title.rendered}</h3>
+                      </div>
                       {post.acf.mobile_hero.url ? (
                         <picture>
                           <source media="(min-width: 650px)" srcSet={`${post.acf.hero_img.url}`} />
@@ -46,7 +50,6 @@ const Home = () => {
                       ) : (
                         <img src={`${post.acf.hero_img.url}`} alt={`${post.acf.hero_img.alt}`}></img>
                       )}
-                      <h3>{post.title.rendered}</h3>
                     </div>
                   </Link>
                 </article>
