@@ -1,18 +1,26 @@
 @use "../defaults/variables" as *;
 
 .site-wrapper main .project-page {
-  // color: white;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
+  // max-width: 800px;
 
   h1,
   h2 {
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 300;
     text-align: center;
   }
 
-  //   h2 {
-  //     border-bottom: 2px solid white;
-  //   }
+  p {
+    font-size: 0.9rem;
+  }
 
   a {
     color: white;
@@ -23,8 +31,7 @@
   img {
     display: block;
     margin: 0 auto;
-    max-width: 32rem;
-    // float: right;
+    max-width: 90%;
   }
 
   section {
@@ -39,7 +46,7 @@
       background-color: white;
       padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 0.1rem 0.5rem $dark_blue;
+      box-shadow: 0 0.1rem 0.5rem #afb2b4;
     }
 
     ul {
@@ -71,58 +78,76 @@
     justify-content: space-around;
     background-color: $orange;
   }
-
-  //   section {
-  //     @media (min-width: 900px) {
-  //       padding-left: 10rem;
-  //       padding-right: 10rem;
-  //     }
-  //   }
-
-  //   @media (min-width: 1000px) {
-  //     .project-page-features {
-  //       display: flex;
-  //       flex-wrap: wrap;
-  //       justify-content: space-around;
-  //       h2 {
-  //         width: 100%;
-  //       }
-  //       .project-feature {
-  //         margin-top: 0rem;
-  //         max-width: 46%;
-  //         .project-feature-content {
-  //           margin-left: 0.5rem;
-  //         }
-  //       }
-  //     }
-  //   }
+  @media (min-width: 800px) {
+    img {
+      max-width: 32rem;
+      // float: right;
+      // padding-left: 7rem;
+      // padding-right: 7rem;
+      // padding: 2rem 7rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    img {
+      float: right;
+      padding: 2rem 7rem;
+    }
+    .project-page-description {
+      min-height: 400px;
+    }
+  }
 }
 
 .site-wrapper main .project-page#bon-vin {
+  .project-page-skills {
+    li {
+      border: 2px solid $post1;
+    }
+  }
   .project-links-wrapper {
     background-color: $post1;
   }
 }
 
 .site-wrapper main .project-page#neon-nights {
+  .project-page-skills {
+    li {
+      border: 2px solid $post2;
+    }
+  }
   .project-links-wrapper {
     background-color: $post2;
   }
 }
 
 .site-wrapper main .project-page#personal-portfolio {
+  .project-page-skills {
+    li {
+      border: 2px solid $post3;
+    }
+  }
   .project-links-wrapper {
     background-color: $post3;
   }
 }
 
 .site-wrapper main .project-page#cat-catcher {
+  .project-page-skills {
+    li {
+      border: 2px solid $post4;
+    }
+  }
   .project-links-wrapper {
     background-color: $post4;
   }
 }
 
 .site-wrapper main .project-page#php-admin-table {
+  .project-page-skills {
+    li {
+      border: 2px solid $post6;
+    }
+  }
   .project-links-wrapper {
     background-color: $post6;
   }

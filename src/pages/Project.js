@@ -44,7 +44,7 @@ const Project = () => {
               {/* <p>{restData.acf.description}</p> */}
             </section>
 
-            {(restData.acf.git_link || restData.acf.live_site_link) && (
+            {restData.acf.live_site_link && (
               <section className="project-page-links">
                 <div className="project-links-wrapper">
                   {restData.acf.live_site_link && (
@@ -87,12 +87,12 @@ const Project = () => {
               </section>
             )}
 
-            {(restData.acf.git_link || restData.acf.live_site_link) && (
+            {restData.acf.git_link && (
               <section className="project-page-links">
                 <div className="project-links-wrapper">
                   {restData.acf.git_link && (
                     <p>
-                      <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.live_site_link.target}`}>
+                      <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.git_link.target}`}>
                         {restData.acf.git_link.title}
                       </a>
                     </p>
