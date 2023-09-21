@@ -1,112 +1,77 @@
 @use "../defaults/variables" as *;
 
-// #page-about {
-//   color: white;
+#page-about {
+  max-width: 800px;
 
-//   h1,
-//   h2 {
-//     text-align: center;
-//   }
+  h1,
+  h2 {
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.3rem;
+  }
 
-//   h2 {
-//     border-bottom: 2px solid white;
-//   }
+  p {
+    font-size: 0.9rem;
+  }
 
-// .about-lists {
-//   section {
-//     max-width: 335px;
-//     display: block;
-//     margin: 0 auto;
-//     font-size: 1rem;
-//   }
-// }
+  .skills-list-items .skill.hide {
+    display: none;
+  }
 
-.skills-list-items .skill.hide {
-  display: none;
-}
+  .skills-list-container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.5rem $dark_blue;
+  }
+  .skills-filters-div {
+    display: flex;
+    flex-wrap: wrap;
 
-.skills-list-container {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0.1rem 0.5rem $dark_blue;
-}
-.skills-filters-div {
-  display: flex;
-  flex-wrap: wrap;
+    .skills-filter {
+      font-size: 1.25rem;
+      margin: 0 0.5rem 0.5rem;
+      padding: 0.5rem;
+      background-color: $post1;
+      color: white;
+      border: none;
+      box-shadow: 1px 2px 2px $post1;
+    }
 
-  .skills-filter {
-    font-size: 1.25rem;
-    margin: 0 0.5rem 0.5rem;
+    .skills-filter:hover {
+      background-color: $blue;
+      box-shadow: 1px 2px 2px $dark_blue;
+    }
+
+    .skills-filter.active {
+      background-color: $blue;
+      box-shadow: 1px 2px 2px $dark_blue;
+    }
+  }
+
+  .skills-list-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skill {
+    color: black;
+    font-size: 1rem;
+    border: 2px solid $blue;
+    border-radius: 15px;
     padding: 0.5rem;
-    background-color: $orange;
-    color: white;
-    border: none;
-    box-shadow: 1px 2px 2px $orange;
+    margin: 0.5rem;
   }
 
-  .skills-filter:hover {
-    background-color: $blue;
-    box-shadow: 1px 2px 2px $dark_blue;
+  @media (min-width: 800px) {
+    margin: 0 auto;
+    h1,
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
-
-  .skills-filter.active {
-    background-color: $blue;
-    box-shadow: 1px 2px 2px $dark_blue;
-  }
 }
-
-.skills-list-items {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.skill {
-  color: black;
-  font-size: 1rem;
-  border: 2px solid $blue;
-  border-radius: 15px;
-  padding: 0.5rem;
-  margin: 0.5rem;
-}
-
-//   .about-cta {
-//     .cta-wrapper {
-//       width: 224px;
-//       display: block;
-//       margin: 0 auto;
-//     }
-//     a {
-//       text-decoration: none;
-//     }
-//     button {
-//       background-color: $orange;
-//       padding: 0.5rem 1rem;
-//       border-radius: 6px;
-//       width: 14rem;
-//       display: block;
-//       margin: 2.5rem auto 0;
-//       color: white;
-//       border: 2px solid $orange;
-//       box-shadow: 1px 1px 5px rgb(82, 82, 82);
-//     }
-//     button:hover {
-//       border: 2px solid white;
-//     }
-//   }
-//   .about-sections {
-//     @media (min-width: 900px) {
-//       padding-left: 10rem;
-//       padding-right: 10rem;
-//     }
-//   }
-
-//   @media (min-width: 1000px) {
-//     .about-lists {
-//       display: flex;
-//       section {
-//         width: 50%;
-//       }
-//     }
-//   }
-// }
