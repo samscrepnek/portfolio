@@ -23,6 +23,8 @@
   img {
     display: block;
     margin: 0 auto;
+    max-width: 32rem;
+    // float: right;
   }
 
   section {
@@ -94,4 +96,34 @@
   //       }
   //     }
   //   }
+}
+
+.site-wrapper main .project-page#bon-vin {
+  .project-links-wrapper {
+    background-color: $post1;
+  }
+}
+
+.site-wrapper main .project-page#neon-nights {
+  .project-links-wrapper {
+    background-color: $post2;
+  }
+}
+
+.site-wrapper main .project-page#personal-portfolio {
+  .project-links-wrapper {
+    background-color: $post3;
+  }
+}
+
+.site-wrapper main .project-page#cat-catcher {
+  .project-links-wrapper {
+    background-color: $post4;
+  }
+}
+
+.site-wrapper main .project-page#php-admin-table {
+  .project-links-wrapper {
+    background-color: $post6;
+  }
 }
