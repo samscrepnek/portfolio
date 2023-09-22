@@ -28,10 +28,10 @@ const Home = () => {
         <div className="page-wrapper">
           <div className="portfolio">
             <section className="works">
-              {/* <div className="home-works"> */}
               {restData.map((post) => (
                 <article key={post.id} id={`post-${post.id}`} className="project">
                   <Link
+                    aria-label={post.title.rendered}
                     to={`/${post.slug}`}
                     onClick={() => {
                       window.scroll(0, 0);
@@ -45,16 +45,15 @@ const Home = () => {
                       {post.acf.mobile_hero.url ? (
                         <picture>
                           <source media="(min-width: 650px)" srcSet={`${post.acf.hero_img.url}`} />
-                          <img src={`${post.acf.mobile_hero.url}`} alt={`${post.acf.mobile_hero.alt}`}></img>
+                          <img aria-hidden="true" focusable="false" src={`${post.acf.mobile_hero.url}`} alt={`${post.acf.mobile_hero.alt}`}></img>
                         </picture>
                       ) : (
-                        <img src={`${post.acf.hero_img.url}`} alt={`${post.acf.hero_img.alt}`}></img>
+                        <img aria-hidden="true" focusable="false" src={`${post.acf.hero_img.url}`} alt={`${post.acf.hero_img.alt}`}></img>
                       )}
                     </div>
                   </Link>
                 </article>
               ))}
-              {/* </div> */}
             </section>
           </div>
         </div>

@@ -32,16 +32,15 @@ const Project = () => {
               {restData.acf.mobile_hero.url ? (
                 <picture>
                   <source media="(min-width: 650px)" srcSet={`${restData.acf.hero_img.url}`} />
-                  <img src={`${restData.acf.mobile_hero.url}`} alt={`${restData.acf.mobile_hero.alt}`}></img>
+                  <img aria-hidden="true" focusable="false" src={`${restData.acf.mobile_hero.url}`} alt={`${restData.acf.mobile_hero.alt}`}></img>
                 </picture>
               ) : (
-                <img src={`${restData.acf.hero_img.url}`} alt={`${restData.acf.hero_img.alt}`}></img>
+                <img aria-hidden="true" focusable="false" src={`${restData.acf.hero_img.url}`} alt={`${restData.acf.hero_img.alt}`}></img>
               )}
             </header>
             <section className="project-page-description">
               <h2>Description</h2>
               <div dangerouslySetInnerHTML={{ __html: restData.acf.description }} className="wysiwyg-description"></div>
-              {/* <p>{restData.acf.description}</p> */}
             </section>
 
             {restData.acf.live_site_link && (
@@ -49,7 +48,7 @@ const Project = () => {
                 <div className="project-links-wrapper">
                   {restData.acf.live_site_link && (
                     <p>
-                      <a href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
+                      <a aria-label="Link to live site" href={`${restData.acf.live_site_link.url}`} target={`${restData.acf.live_site_link.target}`}>
                         {restData.acf.live_site_link.title}
                       </a>
                     </p>
@@ -76,7 +75,7 @@ const Project = () => {
                 <h2>Key Features</h2>
                 {restData.acf.features.map((feature) => (
                   <div key={feature.feature_title} className="project-feature">
-                    {feature.feature_img.url && <img src={`${feature.feature_img.url}`} alt={`${feature.feature_img.alt}`}></img>}
+                    {feature.feature_img.url && <img aria-hidden="true" focusable="false" src={`${feature.feature_img.url}`} alt={`${feature.feature_img.alt}`}></img>}
                     <div className="project-feature-content">
                       <h3>{feature.feature_title}</h3>
                       <p>{feature.feature_description}</p>
@@ -91,7 +90,7 @@ const Project = () => {
                 <div className="project-links-wrapper">
                   {restData.acf.git_link && (
                     <p>
-                      <a href={`${restData.acf.git_link.url}`} target={`${restData.acf.git_link.target}`}>
+                      <a aria-label="Link to live site" href={`${restData.acf.git_link.url}`} target={`${restData.acf.git_link.target}`}>
                         {restData.acf.git_link.title}
                       </a>
                     </p>
@@ -106,14 +105,6 @@ const Project = () => {
                 <p>{restData.acf.takeaways}</p>
               </section>
             )}
-
-            {/* <nav className="posts-navigation">
-            {restData.previous_post["id"] && (
-              <Link to={`/blog/${restData.previous_post["slug"]}`} className="prev-post">
-                Previous: {restData.previous_post["title"]}
-              </Link>
-            )}
-          </nav> */}
           </div>
         </>
       ) : (

@@ -77,10 +77,18 @@ const About = () => {
               <h2>My Technical Skills</h2>
               <div className="skills-list-container">
                 <div className="skills-filters-div" onClick={handleChange}>
-                  <button className="all skills-filter active">All</button>
-                  <button className="development skills-filter">Development</button>
-                  <button className="design skills-filter">Design</button>
-                  <button className="other skills-filter">Other</button>
+                  <button aria-label="All" className="all skills-filter active">
+                    All
+                  </button>
+                  <button aria-label="Development" className="development skills-filter">
+                    Development
+                  </button>
+                  <button aria-label="Design" className="design skills-filter">
+                    Design
+                  </button>
+                  <button aria-label="Other" className="other skills-filter">
+                    Other
+                  </button>
                 </div>
                 <div className="skills-list-items">
                   {restData.acf.development_skills.map((feature) => (
