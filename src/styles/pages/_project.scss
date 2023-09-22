@@ -3,7 +3,6 @@
 .site-wrapper main .project-page {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-  // max-width: 800px;
 
   h1,
   h2 {
@@ -69,7 +68,8 @@
 
   .project-page-features {
     .project-feature {
-      margin-top: 3rem;
+      margin: 3rem auto 0;
+      max-width: 550px;
     }
   }
 
@@ -78,13 +78,10 @@
     justify-content: space-around;
     background-color: $orange;
   }
+
   @media (min-width: 800px) {
     img {
       max-width: 32rem;
-      // float: right;
-      // padding-left: 7rem;
-      // padding-right: 7rem;
-      // padding: 2rem 7rem;
     }
   }
   @media (min-width: 1200px) {
@@ -94,6 +91,16 @@
     }
     .project-page-description {
       min-height: 400px;
+    }
+    .project-page-features {
+      display: flex;
+      flex-wrap: wrap;
+      h2 {
+        width: 100%;
+      }
+      .project-feature {
+        margin-top: 0;
+      }
     }
   }
 }
