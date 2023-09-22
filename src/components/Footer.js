@@ -11,7 +11,7 @@ const Footer = () => {
         <li>
           <CopyEmail />
         </li>
-        <div className="social-links">
+        <ul className="social-links">
           <li>
             <a href="https://linkedin.com/in/sam-screpnek-389927251" target="blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -31,7 +31,7 @@ const Footer = () => {
               Github
             </a>
           </li>
-        </div>
+        </ul>
       </ul>
       <p>&copy;{getYear()} Sam Screpnek</p>
     </footer>

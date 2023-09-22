@@ -43,7 +43,7 @@ const Nav = () => {
   return (
     <nav className="top-nav">
       <ul>
-        <div className="top-nav-inner-wrapper">
+        <ul className="top-nav-inner-wrapper">
           <li>
             <NavLink to="/" className="name-home-link">
               Sam Screpnek
@@ -56,7 +56,7 @@ const Nav = () => {
               </svg>
             </button>
           </li>
-        </div>
+        </ul>
         <div className="nav-menu-container hidden">
           <div className="nav-menu-wrapper">
             <button className="close-icon" onClick={toggleMenu}>
@@ -64,7 +64,7 @@ const Nav = () => {
                 <path d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
               </svg>
             </button>
-            <ul className="nav-menu">
+            <menu className="nav-menu">
               <li>
                 <NavLink to="/" onClick={toggleMenu}>
                   Home
@@ -78,7 +78,7 @@ const Nav = () => {
               <li>
                 <CopyEmail />
               </li>
-              <div className="social-links">
+              <ul className="social-links">
                 <li>
                   <a href="https://linkedin.com/in/sam-screpnek-389927251" target="blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -98,8 +98,8 @@ const Nav = () => {
                     Github
                   </a>
                 </li>
-              </div>
-            </ul>
+              </ul>
+            </menu>
           </div>
         </div>
       </ul>
