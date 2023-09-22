@@ -22,7 +22,7 @@
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 0.1rem 0.5rem $dark_blue;
+    box-shadow: 0 0.1rem 0.5rem #afb2b4;
   }
   .skills-filters-div {
     display: flex;
@@ -57,7 +57,7 @@
   .skill {
     color: black;
     font-size: 1rem;
-    border: 2px solid $blue;
+    border: 2px solid rgb(131, 131, 131);
     border-radius: 15px;
     padding: 0.5rem;
     margin: 0.5rem;

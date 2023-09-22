@@ -79,6 +79,11 @@
     background-color: $orange;
   }
 
+  .project-page-takeaways {
+    max-width: 800px;
+    margin: 2.5rem auto 0;
+  }
+
   @media (min-width: 800px) {
     img {
       max-width: 32rem;
