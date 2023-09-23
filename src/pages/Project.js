@@ -26,9 +26,11 @@ const Project = () => {
     <>
       {isLoaded ? (
         <>
-          <div className=" project-page" id={`${slug}`}>
+          <div className="project-page" id={`${slug}`}>
             <header>
               <h1>{restData.title.rendered}</h1>
+            </header>
+            <div className="header-description-flex-wrapper">
               {restData.acf.mobile_hero.url ? (
                 <picture>
                   <source media="(min-width: 650px)" srcSet={`${restData.acf.hero_img.url}`} />
@@ -37,11 +39,12 @@ const Project = () => {
               ) : (
                 <img aria-hidden="true" focusable="false" src={`${restData.acf.hero_img.url}`} alt={`${restData.acf.hero_img.alt}`}></img>
               )}
-            </header>
-            <section className="project-page-description">
-              <h2>Description</h2>
-              <div dangerouslySetInnerHTML={{ __html: restData.acf.description }} className="wysiwyg-description"></div>
-            </section>
+
+              <section className="project-page-description">
+                <h2>Description</h2>
+                <div dangerouslySetInnerHTML={{ __html: restData.acf.description }} className="wysiwyg-description"></div>
+              </section>
+            </div>
 
             {restData.acf.live_site_link && (
               <section className="project-page-links">

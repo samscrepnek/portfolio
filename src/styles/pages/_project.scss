@@ -88,14 +88,23 @@
     img {
       max-width: 32rem;
     }
+    .project-page-description {
+      max-width: 800px;
+      margin: 0 auto;
+    }
   }
   @media (min-width: 1200px) {
-    img {
-      float: right;
-      padding: 2rem 7rem;
-    }
-    .project-page-description {
-      min-height: 340px;
+    .header-description-flex-wrapper {
+      display: flex;
+      picture {
+        order: 99;
+      }
+      img {
+        padding: 2rem 2rem 2rem 7rem;
+      }
+      .project-page-description {
+        padding-left: 2rem;
+      }
     }
     .project-page-features {
       display: flex;
