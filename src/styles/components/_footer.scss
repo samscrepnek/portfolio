@@ -3,6 +3,13 @@
   ul {
     list-style: none;
     padding-inline-start: 0;
+
+    .email-li {
+      display: flex;
+      button {
+        padding-inline: 0;
+      }
+    }
   }
   a {
     text-decoration: none;

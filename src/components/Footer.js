@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <ul>
-        <li>
+        <li className="email-li">
           <CopyEmail />
         </li>
         <ul className="social-links">
