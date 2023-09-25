@@ -96,11 +96,9 @@
   @media (min-width: 1200px) {
     .header-description-flex-wrapper {
       display: flex;
-      picture {
-        order: 99;
-      }
       img {
         padding: 2rem 2rem 2rem 7rem;
+        order: 99;
       }
       .project-page-description {
         padding-left: 2rem;
