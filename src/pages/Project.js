@@ -15,7 +15,6 @@ const Project = () => {
         const data = await response.json();
         setData(data[0]);
         setLoadStatus(true);
-        console.log(data);
       } else {
         setLoadStatus(false);
       }
