@@ -38,7 +38,6 @@ const Project = () => {
               )}
 
               <section className="project-page-description">
-                <h2>Description</h2>
                 <div dangerouslySetInnerHTML={{ __html: restData.acf.description }} className="wysiwyg-description"></div>
               </section>
             </div>
