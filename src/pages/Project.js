@@ -31,7 +31,11 @@ const Project = () => {
               <h1>{restData.title.rendered}</h1>
             </header>
             <div className="header-description-flex-wrapper">
-              {restData.acf.hero_img.url && <img aria-hidden="true" focusable="false" src={`${restData.acf.hero_img.url}`} alt={`${restData.acf.hero_img.alt}`}></img>}
+              {restData.acf.hero_img.url && (
+                <picture>
+                  <img aria-hidden="true" focusable="false" src={`${restData.acf.hero_img.url}`} alt={`${restData.acf.hero_img.alt}`}></img>
+                </picture>
+              )}
 
               <section className="project-page-description">
                 <h2>Description</h2>

@@ -42,13 +42,10 @@ const Home = () => {
                         <div className="hover-background"></div>
                         <h3>{post.title.rendered}</h3>
                       </div>
-                      {post.acf.mobile_hero.url ? (
+                      {post.acf.hero_img.url && (
                         <picture>
-                          <source media="(min-width: 650px)" srcSet={`${post.acf.hero_img.url}`} />
-                          <img aria-hidden="true" focusable="false" src={`${post.acf.mobile_hero.url}`} alt={`${post.acf.mobile_hero.alt}`}></img>
+                          <img aria-hidden="true" focusable="false" src={`${post.acf.hero_img.url}`} alt={`${post.acf.hero_img.alt}`}></img>
                         </picture>
-                      ) : (
-                        <img aria-hidden="true" focusable="false" src={`${post.acf.hero_img.url}`} alt={`${post.acf.hero_img.alt}`}></img>
                       )}
                     </div>
                   </Link>
