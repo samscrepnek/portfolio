@@ -61,7 +61,7 @@
         border: 2px solid $blue;
         border-radius: 15px;
         padding: 0.5rem;
-        margin: 0.5rem 2rem;
+        margin: 0.5rem;
       }
     }
   }
@@ -91,6 +91,13 @@
     .project-page-description {
       max-width: 800px;
       margin: 0 auto;
+    }
+    .project-page-skills {
+      ul {
+        li {
+          margin: 0.5rem 2rem;
+        }
+      }
     }
   }
   @media (min-width: 1200px) {
@@ -178,10 +185,10 @@
 .site-wrapper main .project-page#php-admin-table {
   .project-page-skills {
     li {
-      border: 2px solid $postblue;
+      border: 2px solid $postpurple;
     }
   }
   .project-links-wrapper {
-    background-color: $postblue;
+    background-color: $postpurple;
   }
 }
