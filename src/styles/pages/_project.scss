@@ -123,54 +123,65 @@
 .site-wrapper main .project-page#bon-vin {
   .project-page-skills {
     li {
-      border: 2px solid $post1;
+      border: 2px solid $postred;
     }
   }
   .project-links-wrapper {
-    background-color: $post1;
+    background-color: $postred;
   }
 }
 
-.site-wrapper main .project-page#neon-nights {
+.site-wrapper main .project-page#caseriam-studios {
   .project-page-skills {
     li {
-      border: 2px solid $post2;
+      border: 2px solid $postblue;
     }
   }
   .project-links-wrapper {
-    background-color: $post2;
+    background-color: $postblue;
   }
 }
 
 .site-wrapper main .project-page#personal-portfolio {
   .project-page-skills {
     li {
-      border: 2px solid $post3;
+      border: 2px solid $postorange;
     }
   }
   .project-links-wrapper {
-    background-color: $post3;
+    background-color: $postorange;
+  }
+}
+
+.site-wrapper main .project-page#neon-nights {
+  .project-page-skills {
+    li {
+      border: 2px solid $postgrey;
+    }
+  }
+  .project-links-wrapper {
+    background-color: $postgrey;
   }
 }
 
 .site-wrapper main .project-page#cat-catcher {
   .project-page-skills {
     li {
-      border: 2px solid $post4;
+      border: 2px solid $postgreen;
     }
   }
   .project-links-wrapper {
-    background-color: $post4;
+    background-color: $postgreen;
   }
 }
 
 .site-wrapper main .project-page#php-admin-table {
   .project-page-skills {
     li {
-      border: 2px solid $post6;
+      border: 2px solid $postblue;
     }
   }
   .project-links-wrapper {
-    background-color: $post6;
+    background-color: $postblue;
   }
 }
