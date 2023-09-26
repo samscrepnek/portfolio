@@ -54,9 +54,7 @@ const Nav = () => {
                   About
                 </NavLink>
               </li>
-              <li>
-                <CopyEmail />
-              </li>
+
               <ul className="social-links">
                 <li>
                   <a aria-label="Link to LinkedIn" href="https://linkedin.com/in/sam-screpnek-389927251" target="blank">
@@ -78,6 +76,9 @@ const Nav = () => {
                   </a>
                 </li>
               </ul>
+              <li>
+                <CopyEmail />
+              </li>
             </menu>
           </div>
         </div>

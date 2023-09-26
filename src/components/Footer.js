@@ -8,9 +8,6 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <ul>
-        <li className="email-li">
-          <CopyEmail />
-        </li>
         <ul className="social-links">
           <li>
             <a aria-label="Link to LinkedIn" href="https://linkedin.com/in/sam-screpnek-389927251" target="blank">
@@ -32,6 +29,9 @@ const Footer = () => {
             </a>
           </li>
         </ul>
+        <li className="email-li">
+          <CopyEmail />
+        </li>
       </ul>
       <p>&copy;{getYear()} Sam Screpnek</p>
     </footer>
