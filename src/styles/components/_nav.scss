@@ -45,10 +45,6 @@
     height: 66px;
   }
 
-  .nav-menu-container.hidden {
-    display: none;
-  }
-
   .nav-menu-container {
     z-index: 100;
     background-color: white;
@@ -57,6 +53,9 @@
     right: 0;
     left: 0;
     bottom: 0;
+    height: 100vh;
+    transition: height 0.3s ease-out;
+    overflow: hidden;
 
     .nav-menu-wrapper {
       max-width: 1344px;
@@ -67,7 +66,7 @@
     .close-icon {
       position: absolute;
       right: 8px;
-      top: 16px;
+      top: 5px;
     }
 
     .nav-menu {
@@ -79,5 +78,9 @@
         margin-top: 2rem;
       }
     }
+  }
+
+  .nav-menu-container.hidden {
+    height: 0;
   }
 }
