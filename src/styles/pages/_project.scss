@@ -129,7 +129,7 @@
 }
 
 // custom colours for projects //
-.site-wrapper main .project-page#bon-vin {
+.site-wrapper main .project-page.red {
   .project-page-skills {
     li {
       border: 2px solid $postred;
@@ -140,7 +140,7 @@
   }
 }
 
-.site-wrapper main .project-page#caseriam-studios {
+.site-wrapper main .project-page.blue {
   .project-page-skills {
     li {
       border: 2px solid $postblue;
@@ -151,7 +151,7 @@
   }
 }
 
-.site-wrapper main .project-page#personal-portfolio {
+.site-wrapper main .project-page.orange {
   .project-page-skills {
     li {
       border: 2px solid $postorange;
@@ -162,7 +162,7 @@
   }
 }
 
-.site-wrapper main .project-page#neonnights {
+.site-wrapper main .project-page.grey {
   .project-page-skills {
     li {
       border: 2px solid $postgrey;
@@ -173,7 +173,7 @@
   }
 }
 
-.site-wrapper main .project-page#catcatcher {
+.site-wrapper main .project-page.green {
   .project-page-skills {
     li {
       border: 2px solid $postgreen;
@@ -184,7 +184,7 @@
   }
 }
 
-.site-wrapper main .project-page#php-admin-table {
+.site-wrapper main .project-page.purple {
   .project-page-skills {
     li {
       border: 2px solid $postpurple;

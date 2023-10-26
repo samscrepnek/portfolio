@@ -26,7 +26,7 @@ const Project = () => {
     <>
       {isLoaded ? (
         <>
-          <div className="project-page" id={`${slug}`}>
+          <div className={`project-page ${restData.acf.background_colour.value}`} id={`${slug}`}>
             <header>
               <h1>{restData.title.rendered}</h1>
             </header>

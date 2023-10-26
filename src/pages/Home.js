@@ -29,7 +29,7 @@ const Home = () => {
           <div className="portfolio">
             <section className="works">
               {restData.map((post) => (
-                <article key={post.id} id={`post-${post.id}`} className="project">
+                <article key={post.id} id={`post-${post.id}`} className={`project ${post.acf.background_colour.value}`}>
                   <Link
                     aria-label={post.title.rendered}
                     to={`/${post.slug}`}
