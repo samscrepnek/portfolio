@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Loading from "../components/Loading";
 
 const Home = () => {
@@ -24,6 +25,10 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Sam Screpnek Web developer</title>
+        <meta name="description" content="Sam Screpnek Web developer | Web Developer dedicated to creating cutting-edge and accesible online solutions. Located in Vancouver, BC, Canada."></meta>
+      </Helmet>
       {isLoaded ? (
         <div className="page-wrapper">
           <div className="portfolio">

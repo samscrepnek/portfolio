@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Loading from "../components/Loading";
 
 const About = () => {
@@ -66,6 +67,10 @@ const About = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Sam Screpnek Web developer | About</title>
+        <meta name="description" content="Sam Screpnek Web Developer | About | Information about Sam Screpnek and his journey into the world of web development. Located in Vancouver, BC, Canada."></meta>
+      </Helmet>
       {isLoaded ? (
         <div className="page-wrapper" id="page-about">
           <div className="about-sections section-wrapper">

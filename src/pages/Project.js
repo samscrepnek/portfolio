@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Loading from "../components/Loading";
 
 const Project = () => {
@@ -26,6 +27,10 @@ const Project = () => {
     <>
       {isLoaded ? (
         <>
+          <Helmet>
+            <title>Sam Screpnek Web developer | {restData.title.rendered}</title>
+            <meta name="description" content={`Sam Screpnek Web Developer | ${restData.title.rendered} | Information about the ${restData.title.rendered} project.`}></meta>
+          </Helmet>
           <div className={`project-page ${restData.acf.background_colour.value}`} id={`${slug}`}>
             <header>
               <h1>{restData.title.rendered}</h1>
