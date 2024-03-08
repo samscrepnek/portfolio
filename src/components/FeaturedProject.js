@@ -33,8 +33,9 @@ const FeaturedProject = (params) => {
           >
             <div className="project-content-wrapper">
               <div className="title-div">
-                <div className="hover-background"></div>
-                <h3>{restData.title.rendered}</h3>
+                <div className="hover-background">
+                  <h3>{restData.title.rendered}</h3>
+                </div>
               </div>
               {restData.acf.hero_img.url && (
                 <picture>

@@ -44,8 +44,9 @@ const Portfolio = () => {
                   >
                     <div className="project-content-wrapper">
                       <div className="title-div">
-                        <div className="hover-background"></div>
-                        <h3>{post.title.rendered}</h3>
+                        <div className="hover-background">
+                          <h3>{post.title.rendered}</h3>
+                        </div>
                       </div>
                       {post.acf.hero_img.url && (
                         <picture>
