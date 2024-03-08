@@ -50,6 +50,11 @@ const Nav = () => {
                 </NavLink>
               </li>
               <li>
+                <NavLink aria-label="Link to portfolio page" to="/portfolio" onClick={closeMenu}>
+                  Portfolio
+                </NavLink>
+              </li>
+              <li>
                 <NavLink aria-label="Link to about page" to="/about" onClick={closeMenu}>
                   About
                 </NavLink>

@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Loading from "../components/Loading";
+import FeaturedProject from "../components/FeaturedProject";
 
 const Home = () => {
-  const restPath = "https://samscrepnek.ca/qM3B3Db6DyVW5YPK/wp-json/wp/v2/pinkmug-project?_embed&acf_format=standard";
+  const restPath = "https://samscrepnek.ca/qM3B3Db6DyVW5YPK/wp-json/wp/v2/pages/144?acf_format=standard";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -31,31 +32,46 @@ const Home = () => {
       </Helmet>
       {isLoaded ? (
         <div className="page-wrapper">
-          <div className="portfolio">
-            <section className="works">
-              {restData.map((post) => (
-                <article key={post.id} id={`post-${post.id}`} className={`project ${post.acf.background_colour.value}`}>
-                  <Link
-                    aria-label={post.title.rendered}
-                    to={`/${post.slug}`}
-                    onClick={() => {
-                      window.scroll(0, 0);
-                    }}
-                  >
-                    <div className="project-content-wrapper">
-                      <div className="title-div">
-                        <div className="hover-background"></div>
-                        <h3>{post.title.rendered}</h3>
-                      </div>
-                      {post.acf.hero_img.url && (
-                        <picture>
-                          <img aria-hidden="true" focusable="false" src={`${post.acf.hero_img.url}`} alt={`${post.acf.hero_img.alt}`}></img>
-                        </picture>
-                      )}
-                    </div>
-                  </Link>
-                </article>
-              ))}
+          <div className="home">
+            <header id="home-header">
+              <div className="info">
+                <p>Hi I'm</p>
+                <h1>Sam Screpnek</h1>
+              </div>
+              <div className="intro-pic"></div>
+              <div>
+                <p>A Web Developer specializing in web design, development, and SEO.</p>
+              </div>
+            </header>
+            <section className="about-cta">
+              <Link
+                aria-label="about-link"
+                to="/about"
+                onClick={() => {
+                  window.scroll(0, 0);
+                }}
+              >
+                <button>
+                  <p>Read about my story</p>
+                </button>
+              </Link>
+            </section>
+            <section id="home-featured-section">
+              <p>Check out my recent project</p>
+              <FeaturedProject postID={restData.acf.featured_project.ID} />
+            </section>
+            <section className="portfolio-cta">
+              <Link
+                aria-label="portfolio-link"
+                to="/portfolio"
+                onClick={() => {
+                  window.scroll(0, 0);
+                }}
+              >
+                <button>
+                  <p>Or look at my full portfolio</p>
+                </button>
+              </Link>
             </section>
           </div>
         </div>
