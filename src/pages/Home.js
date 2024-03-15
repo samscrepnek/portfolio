@@ -38,7 +38,13 @@ const Home = () => {
                 <p>Hi I'm</p>
                 <h1>Sam Screpnek</h1>
               </div>
-              <div className="intro-pic"></div>
+              {restData.acf.main_image.url && (
+                <div className="intro-pic">
+                  <picture>
+                    <img aria-hidden="true" focusable="false" src={`${restData.acf.main_image.url}`} alt={`${restData.acf.main_image.alt}`}></img>
+                  </picture>
+                </div>
+              )}
               <div>
                 <p>A Web Developer specializing in web design, development, and SEO.</p>
               </div>
@@ -56,10 +62,12 @@ const Home = () => {
                 </button>
               </Link>
             </section>
-            <section id="home-featured-section">
-              <p>Check out my recent project</p>
-              <FeaturedProject postID={restData.acf.featured_project.ID} />
-            </section>
+            {restData.acf.featured_project.ID && (
+              <section id="home-featured-section">
+                <p>Check out my recent project</p>
+                <FeaturedProject postID={restData.acf.featured_project.ID} />
+              </section>
+            )}
             <section className="portfolio-cta">
               <Link
                 aria-label="portfolio-link"
