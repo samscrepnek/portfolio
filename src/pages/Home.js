@@ -52,6 +52,7 @@ const Home = () => {
               </section>
               <section className="about-cta">
                 <Link
+                  className="cta"
                   aria-label="about-link"
                   to="/about"
                   onClick={() => {
@@ -74,6 +75,7 @@ const Home = () => {
               )}
               <section className="portfolio-cta">
                 <Link
+                  className="cta"
                   aria-label="portfolio-link"
                   to="/portfolio"
                   onClick={() => {
