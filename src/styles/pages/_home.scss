@@ -1,116 +1,113 @@
 @use "../defaults/variables" as *;
-.home,
-.portfolio {
-  .works {
-    flex-wrap: wrap;
-  }
-  img {
-    max-width: 100%;
-  }
-  .project {
-    background-color: $blue;
-    height: 413px;
-    max-width: 432px;
-    width: 100%;
-    overflow: hidden;
-    margin: 2.5rem auto 0;
-    display: flex;
-    justify-content: center;
+#home {
+  #home-header {
+    margin: 5.5rem auto 0;
+    max-width: 600px;
     position: relative;
-    box-shadow: 0 0.1rem 0.5rem #afb2b4;
-
-    .project-content-wrapper {
-      height: 100%;
+    #home-header-info {
       display: flex;
-      align-items: center;
+      align-items: baseline;
+      gap: 0.5rem;
+      position: absolute;
+      top: 4.5rem;
+      left: 0;
+      background-color: #faf9f6;
+      padding: 0 0.5rem;
     }
 
-    .title-div {
-      .hover-background {
+    #home-header-pic {
+      width: 82%;
+      max-width: 653px;
+      height: 406px;
+      margin: 0 -0.5rem 0 auto;
+      box-shadow: 0 0.1rem 0.5rem #afb2b4;
+
+      img {
         width: 100%;
-        height: 25%;
-        position: absolute;
-        z-index: 25;
-        background-color: White;
-        left: 0;
-        bottom: 0;
-        border-radius: 25px 25px 0 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        transition: height ease 0.15s;
-        box-shadow: 0 0.1rem 0.5rem #afb2b4;
-      }
-      h3 {
-        color: black;
-        font-size: 1.25rem;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
-
-  @media (min-width: 640px) {
-    .project {
-      .title-div {
-        .hover-background {
-          height: 0%;
-        }
-      }
-    }
-    .project:hover {
-      .title-div {
-        .hover-background {
-          height: 25%;
-        }
-      }
-    }
+  #home-blurb {
+    text-align: center;
+    font-size: 1.25rem;
+    max-width: 450px;
+    margin: 2.75rem auto 0;
   }
-
-  @media (min-width: 904px) {
-    .works {
-      display: grid;
-      grid-template-columns: 432px 432px;
-      grid-template-rows: auto;
-      column-gap: 8px;
+  .about-cta {
+    margin-top: 2rem;
+    a {
+      text-decoration: none;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      display: flex;
       justify-content: center;
+      align-items: center;
+      width: 288px;
+      font-size: 1.25rem;
+      border: 2px solid transparent;
+      color: white;
+      background-color: $blue;
+      svg {
+        max-height: 2rem;
+        fill: white;
+      }
     }
   }
-
-  @media (min-width: 1344px) {
-    .works {
-      grid-template-columns: 432px 432px 432px;
+  #home-featured-section {
+    margin-top: 3.5rem;
+    p {
+      font-size: 1.25rem;
+      text-align: center;
     }
   }
-}
-
-// custom coulors for projects //
-
-// bonvin //
-.project.red {
-  background-color: $postred;
-}
-
-// caseriam //
-.project.blue {
-  background-color: $postblue;
-}
-
-// portfolio //
-.project.orange {
-  background-color: $postorange;
-}
-
-// neon-nights //
-.project.grey {
-  background-color: $postgrey;
-}
-
-// cat-catcher //
-.project.green {
-  background-color: $postgreen;
-}
-
-// php table //
-.project.purple {
-  background-color: $postpurple;
+  .portfolio-cta {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    a {
+      text-decoration: none;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 326px;
+      font-size: 1.25rem;
+      border: 2px solid transparent;
+      color: white;
+      background-color: $blue;
+      svg {
+        max-height: 2rem;
+        fill: white;
+      }
+    }
+  }
+  @media (min-width: 620px) {
+    #home-header {
+      #home-header-pic {
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+  @media (min-width: 1000px) {
+    display: flex;
+    justify-content: space-evenly;
+    #home-header {
+      margin: 5.5rem 0 0;
+      position: sticky;
+      top: 171.2px;
+      height: 406px;
+    }
+    #home-flex-div {
+      margin-top: 12rem;
+    }
+    #home-featured-section {
+      margin-top: 11.5rem;
+    }
+  }
 }
