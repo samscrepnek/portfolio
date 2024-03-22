@@ -21,14 +21,33 @@ const Nav = () => {
 
   return (
     <nav className="top-nav">
-      <ul>
+      <menu>
         <ul className="top-nav-inner-wrapper">
-          <li>
-            <NavLink aria-label="Link to home page" to="/" className="name-home-link">
-              Sam Screpnek
-            </NavLink>
-          </li>
-          <li>
+          <ul id="top-nav-left">
+            <li id="screpnek-link">
+              <NavLink aria-label="Link to home page" to="/" className="name-home-link">
+                Sam Screpnek
+              </NavLink>
+            </li>
+            <ul id="desktop-links">
+              <li>
+                <NavLink aria-label="Link to home page" to="/" className="name-home-link">
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink aria-label="Link to portfolio page" to="/portfolio" className="name-home-link">
+                  Portfolio
+                </NavLink>
+              </li>
+              <li>
+                <NavLink aria-label="Link to about page" to="/about" className="name-home-link">
+                  About
+                </NavLink>
+              </li>
+            </ul>
+          </ul>
+          <li id="top-nav-right">
             <button aria-label="Open menu" className="menu-icon" onClick={openMenu}>
               <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M24 6h-24v-3h24v4zm0 5h-24v3h24v-4zm0 8h-24v3h24v-4z" />
@@ -87,7 +106,7 @@ const Nav = () => {
             </menu>
           </div>
         </div>
-      </ul>
+      </menu>
     </nav>
   );
 };

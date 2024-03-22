@@ -9,16 +9,33 @@
   box-shadow: 0 0.1rem 0.5rem #afb2b4;
   z-index: 50;
 
-  ul {
-    list-style: none;
-    padding-inline-start: 0;
-    margin: 0 auto;
-    max-width: 1344px;
-  }
-
   menu {
     list-style: none;
     padding-inline-start: 0;
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+  .top-nav-inner-wrapper {
+    margin: 0 auto;
+    max-width: 1344px;
+    #top-nav-left {
+      display: flex;
+      #desktop-links {
+        display: none;
+
+        border-left: 2px solid black;
+        margin-left: 1.2rem;
+        li {
+          padding-left: 1.25rem;
+          a {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
   }
 
   a {
@@ -67,7 +84,7 @@
     .close-icon {
       position: absolute;
       right: 8px;
-      top: 5px;
+      top: 15px;
     }
 
     .nav-menu {
@@ -83,5 +100,15 @@
 
   .nav-menu-container.hidden {
     height: 0;
+  }
+
+  @media (min-width: 750px) {
+    .top-nav-inner-wrapper {
+      #top-nav-left {
+        #desktop-links {
+          display: flex;
+        }
+      }
+    }
   }
 }
